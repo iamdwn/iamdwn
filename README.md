@@ -1,5 +1,5 @@
 ## Hey! 👋
-I'm Dozun, a 21 years old web developer from Vietnam.
+I'm Dozun, a 21 years old back-end developer from Vietnam.
 
 - 👨‍💻 Learning at FPT University
 
