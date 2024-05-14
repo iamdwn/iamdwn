@@ -1,11 +1,9 @@
 ## Hey! 👋
 I'm Dozun, a 21 years old web developer from Vietnam.
 
-- 👨‍💻 Learning at FPTUniversity
+- 👨‍💻 Learning at FPT University
 
 ## Skills
 - 👨‍💻 Java, C, C#, etc...
-- ⚙️ React
-- 👁️ CSS
+- 👁️ HTML, CSS
 - 💽 MySQL, SQLServer
-+ a lot more :Dss
