@@ -10,16 +10,20 @@
     <h1>Chatbot AI trên GitHub Pages</h1>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        function loadBotpress() {
             if (window.botpressWebChat) {
                 window.botpressWebChat.init({
-                    "clientId": "717059c9-ddd9-471d-bf54-617b8cc5edb5", 
-                    "host": "https://cdn.botpress.cloud/webchat/v2.2"
+                    clientId: "717059c9-ddd9-471d-bf54-617b8cc5edb5",
+                    host: "https://cdn.botpress.cloud/webchat/v2.2",
+                    configUrl: "https://files.bpcontent.cloud/2025/03/08/11/20250308111805-48FSYTQ7.json"
                 });
             } else {
-                console.error("Botpress WebChat chưa load xong!");
+                console.warn("Botpress WebChat chưa tải xong, thử lại sau...");
+                setTimeout(loadBotpress, 1000);
             }
-        });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadBotpress);
     </script>
 </body>
 </html>
