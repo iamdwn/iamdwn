@@ -16,4 +16,4 @@ I'm Dozun, a 21 years old back-end developer from Vietnam.
   <img alt="github-snake" src="https://github.com/iamdwn/iamdwn/blob/output/github-snake.svg" />
 </picture>
 
-[![Gặp Bọ Chán](https://img.shields.io/badge/%F0%9F%A4%96%20Bọ%20Chán%20Nè-Gâu%20Gâu!-blue?style=for-the-badge)](https://your-chatbot-link.com)
+[![Gặp Bọ Chán](https://img.shields.io/badge/%F0%9F%A4%96%20Mở%20Chatbot-Gâu%20Gâu!-black?style=for-the-badge)](https://iamdwn.github.io/iamdwn)
