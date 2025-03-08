@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot AI</title>
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js" defer></script>
+    <title>Duong GPT</title>
 </head>
 <body>
-    <h1>Chatbot AI trên GitHub Pages</h1>
-
-    <script>
-        function loadBotpress() {
-            if (window.botpressWebChat) {
-                window.botpressWebChat.init({
-                    clientId: "717059c9-ddd9-471d-bf54-617b8cc5edb5",
-                    host: "https://cdn.botpress.cloud/webchat/v2.2",
-                    configUrl: "https://files.bpcontent.cloud/2025/03/08/11/20250308111805-48FSYTQ7.json"
-                });
-            } else {
-                console.warn("Botpress WebChat chưa tải xong, thử lại sau...");
-                setTimeout(loadBotpress, 1000);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", loadBotpress);
-    </script>
+    <h1>Chatbot của tôi</h1>
+    <iframe 
+        src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/03/08/11/20250308111805-KB9OLAKH.json"
+        width="400"
+        height="600"
+        style="border: none;">
+    </iframe>
 </body>
 </html>
