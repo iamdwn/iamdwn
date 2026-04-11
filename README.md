@@ -1,11 +1,11 @@
-  ## Hey! 👋
+  ## Hey!
 I'm Dozun, a 22 years old back-end developer from Vietnam.
 
-- 👨‍💻 Graduated from FPT University
+- Graduated from FPT University
 
 ## Skills
-- 👨‍💻 Java, C, C#, Pascal
-- 💽 MySQL, SQLServer, PostgreSQL
+- Java, C, C#, Pascal
+- MySQL, SQLServer, PostgreSQL
 
 
 
