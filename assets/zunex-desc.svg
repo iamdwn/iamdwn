@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 118" width="372" height="118" fill="none"
+     font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+  <g fill="#8b949e" font-size="14">
+    <text x="0" y="16">Local-first code knowledge engine that helps AI agents</text>
+    <text x="0" y="42">understand a codebase through metadata, a knowledge</text>
+    <text x="0" y="68">graph &amp; impact analysis.</text>
+    <text x="0" y="98" fill="#768390">Supports C# · Spring · Node · NestJS · Laravel + MCP.</text>
+  </g>
+</svg>

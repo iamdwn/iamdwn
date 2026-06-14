@@ -42,13 +42,17 @@
 
 ### Projects & Live Sites
 
-<a href="https://zunex.iamdwn.dev/"><img align="right" width="430" src="./assets/zunex-preview.png" alt="Zunex preview" /></a>
+<a href="https://zunex.iamdwn.dev/"><img align="right" width="540" src="./assets/zunex-preview.png" alt="Zunex preview" /></a>
 
-<img src="./assets/zunex-logo.svg" width="210" alt="Zunex" />
+<br>
 
-Local-first code knowledge engine that helps AI agents understand a codebase through metadata, a knowledge graph & impact analysis. Supports **C# · Spring · Node · NestJS · Laravel** + MCP.
+<img src="./assets/zunex-logo.svg" width="230" alt="Zunex" />
 
-<a href="https://zunex.iamdwn.dev/"><img src="./assets/btn-visit.svg" width="130" alt="Visit" /></a>
+<br>
+
+<img src="./assets/zunex-desc.svg" width="372" alt="Local-first code knowledge engine that helps AI agents understand a codebase through metadata, a knowledge graph and impact analysis. Supports C#, Spring, Node, NestJS, Laravel + MCP." />
+
+<a href="https://zunex.iamdwn.dev/"><img src="./assets/btn-visit.svg" width="140" alt="Visit" /></a>
 
 <br clear="all" />
 
