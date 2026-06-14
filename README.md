@@ -62,17 +62,9 @@ motto:      "No applause, only silent momentum."
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=4AF626&line=4AF626&point=ffffff&area=true&area_color=4AF626&hide_border=true&custom_title=Contribution%20Activity" />
 </div>
 
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=iamdwn&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
-</div>
-
 <img src="./assets/divider.svg" width="100%" />
 
 ### <img src="https://api.iconify.design/mdi/cube-outline.svg?color=%234AF626" height="22" align="center" /> Contribution in 3D
-
-<div align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" alt="3d-contrib" />
-</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake-dark.svg" />
