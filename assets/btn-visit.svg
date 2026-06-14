@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" width="150" height="40" fill="none">
+  <defs>
+    <linearGradient id="vg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft glow -->
+  <rect x="3" y="3" width="144" height="34" rx="17" fill="none" stroke="#4AF626" stroke-width="5" opacity="0">
+    <animate attributeName="opacity" values="0;0.22;0" dur="2.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- body -->
+  <rect x="3" y="3" width="144" height="34" rx="17" fill="url(#vg)" stroke="#4AF626" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- globe icon -->
+  <g transform="translate(22,20)" stroke="#4AF626" stroke-width="1.4" fill="none">
+    <circle r="7"/>
+    <ellipse rx="3" ry="7"/>
+    <line x1="-7" y1="0" x2="7" y2="0"/>
+  </g>
+
+  <text x="44" y="25" font-family="'JetBrains Mono','Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" font-weight="700" fill="#e6edf3" letter-spacing="1">VISIT</text>
+
+  <!-- nudging arrow -->
+  <g stroke="#4AF626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g>
+      <line x1="104" y1="20" x2="122" y2="20"/>
+      <polyline points="116,14 122,20 116,26"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;5 0;0 0" dur="1.4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
