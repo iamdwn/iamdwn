@@ -5,7 +5,7 @@
 </p>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=4AF626&center=true&vCenter=true&width=620&lines=Back-end+developer+from+Vietnam;No+applause%2C+only+silent+momentum.;Unseen%2C+yet+unfolding." alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=4AF626&center=true&vCenter=true&width=620&lines=Back-end+developer;No+applause%2C+only+silent+momentum.;Unseen%2C+yet+unfolding." alt="typing" />
 </h3>
 
 <img src="./assets/divider.svg" width="100%" />
