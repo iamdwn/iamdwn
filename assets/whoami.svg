@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" width="460" height="250" fill="none"
+     font-family="'JetBrains Mono','Cascadia Code',Consolas,monospace">
+  <defs>
+    <clipPath id="win"><rect x="2" y="2" width="456" height="246" rx="10"/></clipPath>
+    <!-- per-line typing reveals (width grows left->right) -->
+    <clipPath id="c1"><rect x="22" y="49" width="0" height="20"><animate attributeName="width" from="0" to="82"  begin="0.3s"  dur="0.36s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c2"><rect x="22" y="75" width="0" height="20"><animate attributeName="width" from="0" to="272" begin="0.8s"  dur="1.35s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c3"><rect x="22" y="105" width="0" height="20"><animate attributeName="width" from="0" to="118" begin="2.35s" dur="0.55s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c4"><rect x="22" y="131" width="0" height="20"><animate attributeName="width" from="0" to="296" begin="3.1s"  dur="1.45s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c5"><rect x="22" y="161" width="0" height="20"><animate attributeName="width" from="0" to="118" begin="4.75s" dur="0.55s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c6"><rect x="22" y="187" width="0" height="20"><animate attributeName="width" from="0" to="226" begin="5.5s"  dur="1.15s"  fill="freeze"/></rect></clipPath>
+  </defs>
+
+  <g clip-path="url(#win)">
+    <rect x="2" y="2" width="456" height="246" fill="#0d1117"/>
+    <!-- title bar -->
+    <rect x="2" y="2" width="456" height="32" fill="#161b22"/>
+    <circle cx="24" cy="18" r="5" fill="#ff5f56"/>
+    <circle cx="42" cy="18" r="5" fill="#ffbd2e"/>
+    <circle cx="60" cy="18" r="5" fill="#27c93f"/>
+    <text x="230" y="22" text-anchor="middle" font-size="12" fill="#8b949e">dozun@github : ~ — zsh</text>
+    <circle cx="404" cy="18" r="4" fill="#4AF626"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" repeatCount="indefinite"/></circle>
+    <text x="414" y="22" font-size="11" fill="#4AF626">live</text>
+
+    <!-- moving scanline (CRT vibe) -->
+    <rect x="2" y="34" width="456" height="22" fill="#4AF626" opacity="0.05">
+      <animate attributeName="y" values="34;226;34" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="2.5" y="2.5" width="455" height="245" rx="10" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- typed lines -->
+  <g font-size="14.5">
+    <text x="22" y="63" clip-path="url(#c1)"><tspan fill="#4AF626">$ </tspan><tspan fill="#c9d1d9">whoami</tspan></text>
+    <text x="22" y="89" fill="#7dff5c" clip-path="url(#c2)">Dozun — 22 — Back-end Developer</text>
+
+    <text x="22" y="119" clip-path="url(#c3)"><tspan fill="#4AF626">$ </tspan><tspan fill="#c9d1d9">cat now.txt</tspan></text>
+    <text x="22" y="145" fill="#7dff5c" clip-path="url(#c4)">building Zunex · zunex.iamdwn.dev</text>
+
+    <text x="22" y="175" clip-path="url(#c5)"><tspan fill="#4AF626">$ </tspan><tspan fill="#c9d1d9">echo $MOTTO</tspan></text>
+    <text x="22" y="201" fill="#a5d6ff" clip-path="url(#c6)">"Less noise, more signal."</text>
+
+    <!-- final prompt + blinking cursor -->
+    <text x="22" y="231" opacity="0"><tspan fill="#4AF626">$ </tspan>
+      <animate attributeName="opacity" values="0;1" begin="7.2s" dur="0.01s" fill="freeze"/>
+    </text>
+    <rect x="38" y="220" width="9" height="15" fill="#4AF626" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="7.2s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" begin="7.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

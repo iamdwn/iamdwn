@@ -14,23 +14,24 @@
 
 <table>
   <tr>
-    <td width="160" align="center">
-      <img src="https://github.com/iamdwn.png" width="130" style="border-radius:50%" alt="Dozun" />
+    <td width="210" align="center" valign="top">
+      <img src="https://github.com/iamdwn.png" width="150" style="border-radius:50%" alt="Dozun" />
+      <br /><br />
+      <a href="https://github.com/iamdwn"><img src="https://img.shields.io/badge/@iamdwn-181717?style=flat-square&logo=github&logoColor=white" /></a>
+      <br />
+      <sub>he/him · 🇻🇳 Vietnam</sub>
     </td>
-    <td>
-
-```yaml
-name:       Dozun
-age:        22
-role:       Back-end Developer
-location:   Vietnam 🇻🇳
-education:  FPT University
-motto:      "No applause, only silent momentum."
-```
-
-   </td>
+    <td valign="middle">
+      <img src="./assets/whoami.svg" width="460" alt="whoami" />
+    </td>
   </tr>
 </table>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Focus-Back--end-4AF626?style=flat-square&labelColor=161b22" />
+  <img src="https://img.shields.io/badge/Building-Zunex-9d7bff?style=flat-square&labelColor=161b22" />
+  <img src="https://img.shields.io/badge/Open_to-Collab-4AF626?style=flat-square&labelColor=161b22" />
+</p>
 
 <img src="./assets/divider.svg" width="100%" />
 
