@@ -100,12 +100,6 @@ motto:      "No applause, only silent momentum."
 
 <img src="./assets/divider.svg" width="100%" />
 
-<p align="center">
-  <img src="./assets/orbit-3d.svg" width="600" alt="3D" />
-</p>
-
-<img src="./assets/divider.svg" width="100%" />
-
 ### Contributions
 
 <picture>
@@ -120,7 +114,7 @@ motto:      "No applause, only silent momentum."
 
 <div align="center">
   <a href="https://iamdwn.github.io/iamdwn">
-    <img src="./assets/btn-talk.svg" alt="Gặp Bọ Chán — Gâu Gâu!" width="300" />
+    <img src="./assets/btn-talk.svg" alt="Chat với Bọ Chán — Gâu Gâu!" width="340" />
   </a>
 </div>
 
