@@ -100,6 +100,12 @@ motto:      "No applause, only silent momentum."
 
 <img src="./assets/divider.svg" width="100%" />
 
+<p align="center">
+  <img src="./assets/orbit-3d.svg" width="600" alt="3D" />
+</p>
+
+<img src="./assets/divider.svg" width="100%" />
+
 ### Contributions
 
 <picture>
