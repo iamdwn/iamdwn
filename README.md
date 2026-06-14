@@ -22,50 +22,35 @@
 
 ### Tech Stack
 
-<table>
-  <tr>
-    <td valign="top"><b>Languages</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-      <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" />
-      <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
-      <img src="https://img.shields.io/badge/Pascal-1E2761?style=for-the-badge&logo=delphi&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td valign="top"><b>Databases</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-      <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td valign="top"><b>Tools</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-    </td>
-  </tr>
-</table>
+<b>Languages</b> &nbsp;&nbsp;
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" />
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
+<img src="https://img.shields.io/badge/Pascal-1E2761?style=for-the-badge&logo=delphi&logoColor=white" />
+
+<b>Databases</b> &nbsp;&nbsp;
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+
+<b>Tools</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 
 <img src="./assets/divider.svg" width="100%" />
 
 ### Projects & Live Sites
 
-<table>
-  <tr>
-    <td width="42%" valign="middle">
-      <img src="./assets/zunex-logo.svg" width="230" alt="Zunex" /><br /><br />
-      <sub>Local-first code knowledge engine that helps AI agents understand a codebase through metadata, a knowledge graph &amp; impact analysis. Supports C# · Spring · Node · NestJS · Laravel + MCP.</sub><br /><br />
-      <a href="https://zunex.iamdwn.dev/"><img src="./assets/btn-visit.svg" width="130" alt="Visit" /></a>
-    </td>
-    <td width="58%" valign="middle">
-      <a href="https://zunex.iamdwn.dev/"><img src="./assets/zunex-preview.png" width="100%" alt="Zunex preview" /></a>
-    </td>
-  </tr>
-</table>
+<a href="https://zunex.iamdwn.dev/"><img align="right" width="430" src="./assets/zunex-preview.png" alt="Zunex preview" /></a>
+
+<img src="./assets/zunex-logo.svg" width="210" alt="Zunex" />
+
+Local-first code knowledge engine that helps AI agents understand a codebase through metadata, a knowledge graph & impact analysis. Supports **C# · Spring · Node · NestJS · Laravel** + MCP.
+
+<a href="https://zunex.iamdwn.dev/"><img src="./assets/btn-visit.svg" width="130" alt="Visit" /></a>
+
+<br clear="all" />
 
 <img src="./assets/divider.svg" width="100%" />
 
