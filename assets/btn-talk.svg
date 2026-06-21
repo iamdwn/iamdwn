@@ -11,11 +11,11 @@
   </defs>
 
   <!-- soft glow -->
-  <rect x="6" y="8" width="368" height="100" rx="50" fill="none" stroke="#4AF626" stroke-width="6" opacity="0">
+  <rect x="6" y="8" width="368" height="100" rx="50" fill="none" stroke="#22D3EE" stroke-width="6" opacity="0">
     <animate attributeName="opacity" values="0;0.2;0" dur="2.6s" repeatCount="indefinite"/>
   </rect>
   <!-- pill body -->
-  <rect x="6" y="8" width="368" height="100" rx="50" fill="url(#pill)" stroke="#4AF626" stroke-width="1.6">
+  <rect x="6" y="8" width="368" height="100" rx="50" fill="url(#pill)" stroke="#22D3EE" stroke-width="1.6">
     <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2.6s" repeatCount="indefinite"/>
   </rect>
 
@@ -37,9 +37,9 @@
 
     <!-- ears (sharp, erect) -->
     <polygon points="-18,-16 -28,-42 -6,-22" fill="#23272e"/>
-    <polygon points="-16,-19 -22,-36 -9,-24" fill="#4AF626" opacity="0.22"/>
+    <polygon points="-16,-19 -22,-36 -9,-24" fill="#22D3EE" opacity="0.22"/>
     <polygon points="18,-16 28,-42 6,-22" fill="#23272e"/>
-    <polygon points="16,-19 22,-36 9,-24" fill="#4AF626" opacity="0.22"/>
+    <polygon points="16,-19 22,-36 9,-24" fill="#22D3EE" opacity="0.22"/>
 
     <!-- angular head -->
     <path d="M-22,-16 L22,-16 L17,6 L7,17 L0,21 L-7,17 L-17,6 Z" fill="#2e333b" stroke="#15181d" stroke-width="1"/>
@@ -53,19 +53,19 @@
     <path d="M-4,13 q4,-3 8,0 l-4,7 Z" fill="#0d0f12"/>
 
     <!-- collar -->
-    <path d="M-16,19 q16,9 32,0" stroke="#4AF626" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-    <circle cx="0" cy="24" r="2.4" fill="#7dff5c"/>
+    <path d="M-16,19 q16,9 32,0" stroke="#22D3EE" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="24" r="2.4" fill="#67E8F9"/>
 
     <!-- sunglasses -->
     <g>
-      <polygon points="-19,-12 -4,-13 -3,-2 -18,-1" fill="#0d1117" stroke="#4AF626" stroke-width="2"/>
-      <polygon points="4,-13 19,-12 18,-1 3,-2" fill="#0d1117" stroke="#4AF626" stroke-width="2"/>
-      <line x1="-4" y1="-9" x2="4" y2="-9" stroke="#4AF626" stroke-width="2.4"/>
-      <line x1="-19" y1="-10" x2="-25" y2="-15" stroke="#4AF626" stroke-width="2"/>
-      <line x1="19" y1="-10" x2="25" y2="-15" stroke="#4AF626" stroke-width="2"/>
+      <polygon points="-19,-12 -4,-13 -3,-2 -18,-1" fill="#0d1117" stroke="#22D3EE" stroke-width="2"/>
+      <polygon points="4,-13 19,-12 18,-1 3,-2" fill="#0d1117" stroke="#22D3EE" stroke-width="2"/>
+      <line x1="-4" y1="-9" x2="4" y2="-9" stroke="#22D3EE" stroke-width="2.4"/>
+      <line x1="-19" y1="-10" x2="-25" y2="-15" stroke="#22D3EE" stroke-width="2"/>
+      <line x1="19" y1="-10" x2="25" y2="-15" stroke="#22D3EE" stroke-width="2"/>
       <!-- shine sweep across lenses -->
       <g clip-path="url(#lensclip)">
-        <rect x="-46" y="-16" width="9" height="18" fill="#7dff5c" opacity="0.55" transform="skewX(-22)">
+        <rect x="-46" y="-16" width="9" height="18" fill="#67E8F9" opacity="0.55" transform="skewX(-22)">
           <animate attributeName="x" values="-46;42" dur="3.2s" repeatCount="indefinite"/>
         </rect>
       </g>
@@ -73,8 +73,8 @@
 
     <!-- speech bubble: Gâu! -->
     <g transform="translate(30,-38)">
-      <rect x="0" y="-12" width="44" height="22" rx="11" fill="#4AF626"/>
-      <path d="M6,9 l-6,9 l13,-6 Z" fill="#4AF626"/>
+      <rect x="0" y="-12" width="44" height="22" rx="11" fill="#22D3EE"/>
+      <path d="M6,9 l-6,9 l13,-6 Z" fill="#22D3EE"/>
       <text x="22" y="3" text-anchor="middle" font-family="'JetBrains Mono','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#0d1117">Gâu!</text>
       <animateTransform attributeName="transform" type="translate" values="30 -38;30 -41;30 -38" dur="2.6s" repeatCount="indefinite"/>
     </g>
@@ -84,12 +84,12 @@
   <text x="152" y="52" font-family="'JetBrains Mono','Segoe UI',Helvetica,Arial,sans-serif"
         font-size="19" font-weight="800" fill="#e6edf3">Chat với Bọ Chán</text>
   <g transform="translate(152,68)">
-    <g fill="#4AF626">
+    <g fill="#22D3EE">
       <ellipse cx="0" cy="6" rx="5" ry="4"/>
       <circle cx="-5" cy="-1" r="2"/>
       <circle cx="0" cy="-3" r="2"/>
       <circle cx="5" cy="-1" r="2"/>
     </g>
-    <text x="16" y="10" font-family="'JetBrains Mono','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#4AF626" letter-spacing="2">GÂU GÂU !</text>
+    <text x="16" y="10" font-family="'JetBrains Mono','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#22D3EE" letter-spacing="2">GÂU GÂU !</text>
   </g>
 </svg>

@@ -1,11 +1,11 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:4AF626&height=140&section=header" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,100:F472B6&height=140&section=header" />
 
 <p align="center">
   <img src="./assets/name.svg" alt="Dozun" width="420" />
 </p>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=4AF626&center=true&vCenter=true&width=620&lines=Back-end+developer;No+applause%2C+only+silent+momentum.;Unseen%2C+yet+unfolding." alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&width=620&lines=Back-end+developer;No+applause%2C+only+silent+momentum.;Unseen%2C+yet+unfolding." alt="typing" />
 </h3>
 
 <img src="./assets/divider.svg" width="100%" />
@@ -59,16 +59,16 @@
 ### GitHub Stats
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=iamdwn&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&icon_color=4AF626&title_color=4AF626&text_color=c9d1d9" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamdwn&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=4AF626&text_color=c9d1d9" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=iamdwn&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&icon_color=22D3EE&title_color=22D3EE&text_color=c9d1d9" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamdwn&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=c9d1d9" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&theme=dark&hide_border=true&background=0D1117&ring=4AF626&fire=4AF626&currStreakLabel=4AF626" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&theme=dark&hide_border=true&background=0D1117&ring=22D3EE&fire=F472B6&currStreakLabel=22D3EE" />
 </div>
 
 <div align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=4AF626&line=4AF626&point=ffffff&area=true&area_color=4AF626&hide_border=true&custom_title=Contribution%20Activity" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=22D3EE&line=22D3EE&point=ffffff&area=true&area_color=22D3EE&hide_border=true&custom_title=Contribution%20Activity" />
 </div>
 
 <img src="./assets/divider.svg" width="100%" />
@@ -91,4 +91,4 @@
   </a>
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4AF626,100:0D1117&height=120&section=footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:F472B6,100:22D3EE&height=120&section=footer" />

@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" width="620" height="150" fill="none">
   <defs>
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#1f6f2e"/>
-      <stop offset="45%"  stop-color="#2ea043"/>
-      <stop offset="50%"  stop-color="#7dff5c"/>
-      <stop offset="55%"  stop-color="#2ea043"/>
-      <stop offset="100%" stop-color="#1f6f2e"/>
-      <animate attributeName="x1" values="-1.2;1" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="-0.2;2" dur="3.2s" repeatCount="indefinite"/>
+    <linearGradient id="fi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22D3EE"/>
+      <stop offset="50%"  stop-color="#E6EDF3"/>
+      <stop offset="100%" stop-color="#F472B6"/>
     </linearGradient>
+    <clipPath id="txt">
+      <text x="50%" y="50%" dy="0.35em" text-anchor="middle"
+            font-family="'JetBrains Mono','Segoe UI',Helvetica,Arial,sans-serif"
+            font-size="96" font-weight="800" letter-spacing="4">Dozun</text>
+    </clipPath>
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge>
@@ -20,5 +21,10 @@
   <text x="50%" y="50%" dy="0.35em" text-anchor="middle"
         font-family="'JetBrains Mono','Segoe UI',Helvetica,Arial,sans-serif"
         font-size="96" font-weight="800" letter-spacing="4"
-        fill="url(#shine)" filter="url(#glow)">Dozun</text>
+        fill="url(#fi)" filter="url(#glow)">Dozun</text>
+  <g clip-path="url(#txt)">
+    <rect x="-200" y="0" width="120" height="150" fill="#ffffff" opacity="0.45" transform="skewX(-18)">
+      <animate attributeName="x" values="-220;700" dur="3.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 </svg>

@@ -7,17 +7,17 @@
   </defs>
 
   <!-- soft glow -->
-  <rect x="3" y="3" width="144" height="34" rx="17" fill="none" stroke="#4AF626" stroke-width="5" opacity="0">
+  <rect x="3" y="3" width="144" height="34" rx="17" fill="none" stroke="#22D3EE" stroke-width="5" opacity="0">
     <animate attributeName="opacity" values="0;0.22;0" dur="2.2s" repeatCount="indefinite"/>
   </rect>
 
   <!-- body -->
-  <rect x="3" y="3" width="144" height="34" rx="17" fill="url(#vg)" stroke="#4AF626" stroke-width="1.5">
+  <rect x="3" y="3" width="144" height="34" rx="17" fill="url(#vg)" stroke="#22D3EE" stroke-width="1.5">
     <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
   </rect>
 
   <!-- globe icon -->
-  <g transform="translate(22,20)" stroke="#4AF626" stroke-width="1.4" fill="none">
+  <g transform="translate(22,20)" stroke="#22D3EE" stroke-width="1.4" fill="none">
     <circle r="7"/>
     <ellipse rx="3" ry="7"/>
     <line x1="-7" y1="0" x2="7" y2="0"/>
@@ -27,7 +27,7 @@
         font-size="13" font-weight="700" fill="#e6edf3" letter-spacing="1">VISIT</text>
 
   <!-- nudging arrow -->
-  <g stroke="#4AF626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <g stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <g>
       <line x1="104" y1="20" x2="122" y2="20"/>
       <polyline points="116,14 122,20 116,26"/>

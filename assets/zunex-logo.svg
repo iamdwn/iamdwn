@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" width="360" height="96" font-family="Segoe UI, system-ui, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" width="360" height="96" font-family="'Segoe UI',system-ui,Helvetica,Arial,sans-serif">
   <defs>
-    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6aa8ff"/>
-      <stop offset="0.55" stop-color="#9d7bff"/>
-      <stop offset="1" stop-color="#b794ff"/>
+    <linearGradient id="zg" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5b9dff"/>
+      <stop offset="1" stop-color="#9d7bff"/>
     </linearGradient>
-    <clipPath id="ztxt">
-      <text x="98" y="62" font-size="54" font-weight="800" letter-spacing="-1.5">Zunex</text>
-    </clipPath>
+    <linearGradient id="ztext" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat">
+      <stop offset="0"    stop-color="#6aa8ff"/>
+      <stop offset="0.25" stop-color="#9d7bff"/>
+      <stop offset="0.5"  stop-color="#d8ccff"/>
+      <stop offset="0.75" stop-color="#9d7bff"/>
+      <stop offset="1"    stop-color="#6aa8ff"/>
+      <animate attributeName="x1" values="0;-1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
 
   <g transform="translate(12,12) scale(3)" fill="none" stroke-linejoin="round" stroke-linecap="round">
@@ -21,10 +26,5 @@
     </polygon>
   </g>
 
-  <text x="98" y="62" font-size="54" font-weight="800" letter-spacing="-1.5" fill="url(#zg)">Zunex</text>
-  <g clip-path="url(#ztxt)">
-    <rect x="-60" y="0" width="46" height="96" fill="#ffffff" opacity="0.55" transform="skewX(-18)">
-      <animate attributeName="x" values="60;300" dur="3.2s" begin="0s" repeatCount="indefinite"/>
-    </rect>
-  </g>
+  <text x="98" y="62" font-size="54" font-weight="800" letter-spacing="-1.5" fill="url(#ztext)">Zunex</text>
 </svg>
