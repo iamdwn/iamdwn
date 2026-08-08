@@ -54,7 +54,7 @@
 
 ### Projects & Live Sites
 <br clear="all" />
-<a href="https://zunios.iamdwn.dev/"><img align="right" width="440" src="./assets/zunios-preview_v2.png" alt="ZuniOS preview" /></a>
+<a href="https://zunios.iamdwn.dev/"><img align="right" width="440" src="./assets/zunios-preview_v3.png" alt="ZuniOS preview" /></a>
 
 <img src="./assets/zunios-logo.svg" width="220" alt="ZuniOS" />
 
