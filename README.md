@@ -70,10 +70,10 @@
 
 ### GitHub Stats
 
-<div align="center">
+<!-- <div align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=iamdwn&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&icon_color=22D3EE&title_color=22D3EE&text_color=c9d1d9" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamdwn&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=c9d1d9" />
-</div>
+</div> -->
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&theme=dark&hide_border=true&background=0D1117&ring=22D3EE&fire=F472B6&currStreakLabel=22D3EE" />
