@@ -1,54 +1,304 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 72" width="215" height="72" font-family="Inter, Segoe UI, system-ui, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" width="220" height="72" font-family="Inter, Segoe UI, system-ui, Helvetica, Arial, sans-serif">
   <defs>
-    <linearGradient id="zoTile" x1="0.08" y1="0" x2="0.92" y2="1">
+    <linearGradient id="zvLockTile" x1="0.08" y1="0" x2="0.92" y2="1">
       <stop offset="0" stop-color="#818cf8"/>
       <stop offset="0.38" stop-color="#6366f1"/>
       <stop offset="0.72" stop-color="#7c3aed"/>
       <stop offset="1" stop-color="#9333ea"/>
     </linearGradient>
-    <radialGradient id="zoShade" cx="0.86" cy="1" r="0.85">
+    <radialGradient id="zvLockShade" cx="0.86" cy="1" r="0.85">
       <stop offset="0" stop-color="#2e1065" stop-opacity="0.5"/>
       <stop offset="1" stop-color="#2e1065" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="zoSheen" cx="0.26" cy="0.1" r="0.82">
+    <radialGradient id="zvLockSheen" cx="0.26" cy="0.1" r="0.82">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
       <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.09"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="zoOrbit" x1="0" y1="0.5" x2="1" y2="0.5">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
-      <stop offset="0.34" stop-color="#c7d2fe" stop-opacity="0.72"/>
-      <stop offset="0.68" stop-color="#ffffff" stop-opacity="0.28"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="zoZ" x1="0.1" y1="0" x2="0.9" y2="1">
+    <linearGradient id="zvLockZ" x1="0.1" y1="0" x2="0.9" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
       <stop offset="1" stop-color="#e7e3ff"/>
     </linearGradient>
-    <radialGradient id="zoStar" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
-      <stop offset="0.45" stop-color="#c7d2fe" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#c7d2fe" stop-opacity="0"/>
+    <radialGradient id="zvLockStar" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fed7aa" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#fb923c" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#fb923c" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="zoText" x1="0" y1="0" x2="0" y2="1">
+    <radialGradient id="zvLockStarCore" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="0.5" stop-color="#fdba74"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </radialGradient>
+    <linearGradient id="zvLockText" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
       <stop offset="1" stop-color="#d9d5ff"/>
     </linearGradient>
   </defs>
+  <style>
+    .zvLock-planet-behind {
+      animation: zvLock-orbit-pos 7s linear infinite, zvLock-behind-opacity 7s linear infinite;
+    }
+    .zvLock-planet-front {
+      animation: zvLock-orbit-pos 7s linear infinite, zvLock-front-opacity 7s linear infinite;
+    }
+    .zvLock-planet-glow { transform-box: fill-box; transform-origin: 50% 50%; animation: zvLock-glow-pulse 2.2s ease-in-out infinite; }
+    .zvLock-sheen { animation: zvLock-sheen-pulse 4.5s ease-in-out infinite; }
+    @keyframes zvLock-orbit-pos {
+      0% { transform: translate(41.81px,16.07px); }
+      4.17% { transform: translate(42.05px,18.23px); }
+      8.33% { transform: translate(41.05px,20.79px); }
+      12.50% { transform: translate(38.90px,23.56px); }
+      16.67% { transform: translate(35.73px,26.36px); }
+      20.83% { transform: translate(31.75px,29.01px); }
+      25% { transform: translate(27.25px,31.31px); }
+      29.17% { transform: translate(22.53px,33.11px); }
+      33.33% { transform: translate(17.91px,34.29px); }
+      37.50% { transform: translate(13.70px,34.78px); }
+      41.67% { transform: translate(10.20px,34.52px); }
+      45.83% { transform: translate(7.64px,33.55px); }
+      50% { transform: translate(6.19px,31.93px); }
+      54.17% { transform: translate(5.95px,29.77px); }
+      58.33% { transform: translate(6.95px,27.21px); }
+      62.50% { transform: translate(9.10px,24.44px); }
+      66.67% { transform: translate(12.27px,21.64px); }
+      70.83% { transform: translate(16.25px,18.99px); }
+      75% { transform: translate(20.75px,16.69px); }
+      79.17% { transform: translate(25.47px,14.89px); }
+      83.33% { transform: translate(30.09px,13.71px); }
+      87.50% { transform: translate(34.30px,13.22px); }
+      91.67% { transform: translate(37.80px,13.48px); }
+      95.83% { transform: translate(40.36px,14.45px); }
+      100% { transform: translate(41.81px,16.07px); }
+    }
+    @keyframes zvLock-behind-opacity {
+      0%, 49% { opacity: 0; }
+      50%, 99% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes zvLock-front-opacity {
+      0%, 49% { opacity: 1; }
+      50%, 99% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes zvLock-glow-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    @keyframes zvLock-sheen-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .zvLock-planet-behind, .zvLock-planet-front, .zvLock-planet-glow, .zvLock-sheen { animation: none; }
+      .zvLock-planet-behind { opacity: 0; }
+      .zvLock-planet-front { opacity: 1; transform: translate(41.81px,16.07px); }
+    }
+  </style>
   <g transform="translate(4 8) scale(1.1667)">
-    <rect width="48" height="48" rx="12" fill="url(#zoTile)"/>
-    <rect width="48" height="48" rx="12" fill="url(#zoShade)"/>
-    <rect width="48" height="48" rx="12" fill="url(#zoSheen)"/>
-    <ellipse cx="24" cy="24" rx="19.5" ry="8" fill="none" stroke="url(#zoOrbit)" stroke-width="1.6">
-      <animateTransform attributeName="transform" type="rotate" values="-24 24 24;336 24 24" dur="14s" repeatCount="indefinite"/>
-    </ellipse>
+    <rect width="48" height="48" rx="12" fill="url(#zvLockTile)"/>
+    <rect width="48" height="48" rx="12" fill="url(#zvLockShade)"/>
+    <rect class="zvLock-sheen" width="48" height="48" rx="12" fill="url(#zvLockSheen)"/>
+    <g>
+      <circle cx="6.18" cy="31.88" r="0.24" fill="#a5b4fc" opacity="0.9"/>
+      <circle cx="6.13" cy="31.61" r="0.28" fill="#c7d2fe" opacity="0.99"/>
+      <circle cx="5.97" cy="31.5" r="0.27" fill="#c7d2fe" opacity="0.53"/>
+      <circle cx="5.77" cy="31.78" r="0.11" fill="#a5b4fc" opacity="0.7"/>
+      <circle cx="5.96" cy="30.47" r="0.15" fill="#a5b4fc" opacity="0.66"/>
+      <circle cx="5.63" cy="29.76" r="0.14" fill="#a5b4fc" opacity="0.54"/>
+      <circle cx="5.75" cy="30.33" r="0.21" fill="#818cf8" opacity="0.8"/>
+      <circle cx="6.06" cy="28.3" r="0.26" fill="#a5b4fc" opacity="0.43"/>
+      <circle cx="5.98" cy="28.83" r="0.13" fill="#a5b4fc" opacity="0.65"/>
+      <circle cx="7" cy="28.23" r="0.14" fill="#c7d2fe" opacity="0.39"/>
+      <circle cx="6.3" cy="28.47" r="0.11" fill="#f5f3ff" opacity="0.41"/>
+      <circle cx="6.75" cy="27.31" r="0.2" fill="#f5f3ff" opacity="0.53"/>
+      <circle cx="6.86" cy="27.18" r="0.24" fill="#a5b4fc" opacity="0.52"/>
+      <circle cx="6.51" cy="27.13" r="0.29" fill="#c7d2fe" opacity="0.39"/>
+      <circle cx="6.98" cy="27.01" r="0.16" fill="#f5f3ff" opacity="0.31"/>
+      <circle cx="8.67" cy="25.83" r="0.15" fill="#a5b4fc" opacity="0.26"/>
+      <circle cx="8.32" cy="25.29" r="0.26" fill="#f5f3ff" opacity="0.34"/>
+      <circle cx="8.12" cy="24.76" r="0.23" fill="#c7d2fe" opacity="0.51"/>
+      <circle cx="7.57" cy="25.71" r="0.28" fill="#818cf8" opacity="0.33"/>
+      <circle cx="8.75" cy="25.49" r="0.3" fill="#c7d2fe" opacity="0.28"/>
+      <circle cx="10.23" cy="24.06" r="0.13" fill="#a5b4fc" opacity="0.27"/>
+      <circle cx="9.55" cy="23.43" r="0.29" fill="#f5f3ff" opacity="0.26"/>
+      <circle cx="9.02" cy="23.74" r="0.19" fill="#c7d2fe" opacity="0.48"/>
+      <circle cx="9.9" cy="23.76" r="0.3" fill="#f5f3ff" opacity="0.39"/>
+      <circle cx="11.83" cy="22.03" r="0.25" fill="#f5f3ff" opacity="0.37"/>
+      <circle cx="12.01" cy="22.09" r="0.27" fill="#f5f3ff" opacity="0.24"/>
+      <circle cx="11.86" cy="22.04" r="0.17" fill="#f5f3ff" opacity="0.37"/>
+      <circle cx="11.58" cy="21.8" r="0.29" fill="#a5b4fc" opacity="0.23"/>
+      <circle cx="11.64" cy="21.57" r="0.29" fill="#818cf8" opacity="0.24"/>
+      <circle cx="14.26" cy="20.98" r="0.31" fill="#818cf8" opacity="0.21"/>
+      <circle cx="13.87" cy="20.49" r="0.18" fill="#c7d2fe" opacity="0.29"/>
+      <circle cx="13.73" cy="20.96" r="0.17" fill="#818cf8" opacity="0.34"/>
+      <circle cx="13.6" cy="20.67" r="0.29" fill="#f5f3ff" opacity="0.19"/>
+      <circle cx="16.84" cy="18.82" r="0.29" fill="#f5f3ff" opacity="0.23"/>
+      <circle cx="16.64" cy="18.81" r="0.13" fill="#a5b4fc" opacity="0.24"/>
+      <circle cx="16.97" cy="18" r="0.12" fill="#818cf8" opacity="0.22"/>
+      <circle cx="17.07" cy="19.12" r="0.25" fill="#818cf8" opacity="0.2"/>
+      <circle cx="17.28" cy="18.61" r="0.29" fill="#f5f3ff" opacity="0.24"/>
+      <circle cx="17.54" cy="18.17" r="0.3" fill="#c7d2fe" opacity="0.2"/>
+      <circle cx="19.29" cy="16.89" r="0.24" fill="#c7d2fe" opacity="0.15"/>
+      <circle cx="19.73" cy="16.99" r="0.13" fill="#a5b4fc" opacity="0.09"/>
+      <circle cx="19.83" cy="17.13" r="0.2" fill="#818cf8" opacity="0.16"/>
+      <circle cx="19.6" cy="17.11" r="0.14" fill="#f5f3ff" opacity="0.13"/>
+      <circle cx="21.61" cy="16.37" r="0.17" fill="#f5f3ff" opacity="0.15"/>
+      <circle cx="21.83" cy="16.61" r="0.13" fill="#c7d2fe" opacity="0.2"/>
+      <circle cx="21.78" cy="16.25" r="0.21" fill="#f5f3ff" opacity="0.22"/>
+      <circle cx="21.76" cy="15.92" r="0.26" fill="#a5b4fc" opacity="0.21"/>
+      <circle cx="21.61" cy="16.24" r="0.15" fill="#c7d2fe" opacity="0.18"/>
+      <circle cx="25.57" cy="14.86" r="0.15" fill="#c7d2fe" opacity="0.12"/>
+      <circle cx="25.76" cy="15.01" r="0.11" fill="#818cf8" opacity="0.17"/>
+      <circle cx="26.07" cy="14.23" r="0.28" fill="#a5b4fc" opacity="0.16"/>
+      <circle cx="27.32" cy="14.47" r="0.14" fill="#f5f3ff" opacity="0.23"/>
+      <circle cx="27.97" cy="13.94" r="0.28" fill="#a5b4fc" opacity="0.29"/>
+      <circle cx="28.18" cy="14.49" r="0.19" fill="#a5b4fc" opacity="0.17"/>
+      <circle cx="26.93" cy="13.89" r="0.28" fill="#818cf8" opacity="0.21"/>
+      <circle cx="27.32" cy="14.1" r="0.29" fill="#818cf8" opacity="0.2"/>
+      <circle cx="31.29" cy="13.51" r="0.31" fill="#a5b4fc" opacity="0.3"/>
+      <circle cx="30.43" cy="12.92" r="0.12" fill="#c7d2fe" opacity="0.34"/>
+      <circle cx="31.57" cy="13.57" r="0.22" fill="#f5f3ff" opacity="0.32"/>
+      <circle cx="30.84" cy="14.25" r="0.31" fill="#f5f3ff" opacity="0.18"/>
+      <circle cx="33.16" cy="13.62" r="0.16" fill="#818cf8" opacity="0.32"/>
+      <circle cx="33.96" cy="13.01" r="0.19" fill="#818cf8" opacity="0.45"/>
+      <circle cx="34.03" cy="13.53" r="0.28" fill="#a5b4fc" opacity="0.49"/>
+      <circle cx="33.53" cy="13.72" r="0.31" fill="#818cf8" opacity="0.26"/>
+      <circle cx="33.7" cy="13.22" r="0.12" fill="#818cf8" opacity="0.45"/>
+      <circle cx="33.8" cy="13.63" r="0.27" fill="#c7d2fe" opacity="0.32"/>
+      <circle cx="35.89" cy="13.2" r="0.31" fill="#818cf8" opacity="0.35"/>
+      <circle cx="35.62" cy="13.15" r="0.2" fill="#f5f3ff" opacity="0.49"/>
+      <circle cx="35.45" cy="13.31" r="0.26" fill="#818cf8" opacity="0.53"/>
+      <circle cx="36.19" cy="12.73" r="0.25" fill="#f5f3ff" opacity="0.4"/>
+      <circle cx="36.61" cy="13.39" r="0.25" fill="#f5f3ff" opacity="0.55"/>
+      <circle cx="37.9" cy="12.81" r="0.12" fill="#c7d2fe" opacity="0.68"/>
+      <circle cx="37.51" cy="13.91" r="0.2" fill="#c7d2fe" opacity="0.46"/>
+      <circle cx="38.28" cy="14.21" r="0.29" fill="#f5f3ff" opacity="0.38"/>
+      <circle cx="37.4" cy="13.2" r="0.2" fill="#f5f3ff" opacity="0.45"/>
+      <circle cx="38.32" cy="14.15" r="0.31" fill="#c7d2fe" opacity="0.34"/>
+      <circle cx="38" cy="13.23" r="0.13" fill="#818cf8" opacity="0.35"/>
+      <circle cx="39.21" cy="14.16" r="0.28" fill="#818cf8" opacity="0.78"/>
+      <circle cx="39.6" cy="14.07" r="0.28" fill="#f5f3ff" opacity="0.47"/>
+      <circle cx="39.05" cy="13.93" r="0.12" fill="#c7d2fe" opacity="0.42"/>
+      <circle cx="39.64" cy="13.56" r="0.17" fill="#f5f3ff" opacity="0.61"/>
+      <circle cx="39.84" cy="14.48" r="0.31" fill="#c7d2fe" opacity="0.77"/>
+      <circle cx="41.45" cy="15.18" r="0.13" fill="#a5b4fc" opacity="0.42"/>
+      <circle cx="40.95" cy="14.86" r="0.17" fill="#a5b4fc" opacity="0.84"/>
+      <circle cx="40.94" cy="14.61" r="0.14" fill="#f5f3ff" opacity="0.46"/>
+      <circle cx="40.38" cy="14.56" r="0.27" fill="#818cf8" opacity="0.79"/>
+      <circle cx="40.68" cy="14.84" r="0.31" fill="#c7d2fe" opacity="0.47"/>
+      <circle cx="40.8" cy="14.74" r="0.24" fill="#a5b4fc" opacity="0.39"/>
+      <circle cx="41.98" cy="15.47" r="0.17" fill="#f5f3ff" opacity="0.76"/>
+      <circle cx="42.05" cy="15.91" r="0.19" fill="#c7d2fe" opacity="0.81"/>
+      <circle cx="41.66" cy="16.16" r="0.3" fill="#c7d2fe" opacity="0.86"/>
+    </g>
+    <g class="zvLock-planet-behind">
+      <g class="zvLock-planet-glow">
+        <circle cx="0" cy="0" r="5.2" fill="url(#zvLockStar)"/>
+        <circle cx="0" cy="0" r="2.3" fill="url(#zvLockStarCore)"/>
+      </g>
+    </g>
     <path d="M16 16h16L16 32h16" fill="none" stroke="#1e1b4b" stroke-opacity="0.3" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 1.2)"/>
-    <path d="M16 16h16L16 32h16" fill="none" stroke="url(#zoZ)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="37.8" cy="13.5" r="5.2" fill="url(#zoStar)"/>
-    <circle cx="37.8" cy="13.5" r="2.3" fill="#ffffff"/>
+    <path d="M16 16h16L16 32h16" fill="none" stroke="url(#zvLockZ)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <circle cx="41.94" cy="16.24" r="0.11" fill="#818cf8" opacity="0.66"/>
+      <circle cx="41.87" cy="15.89" r="0.15" fill="#a5b4fc" opacity="0.45"/>
+      <circle cx="41.8" cy="16.19" r="0.2" fill="#f5f3ff" opacity="0.44"/>
+      <circle cx="42.39" cy="17.94" r="0.15" fill="#818cf8" opacity="0.58"/>
+      <circle cx="42.06" cy="18.59" r="0.13" fill="#f5f3ff" opacity="0.78"/>
+      <circle cx="42.26" cy="17.54" r="0.24" fill="#818cf8" opacity="0.76"/>
+      <circle cx="41.9" cy="19.05" r="0.3" fill="#818cf8" opacity="0.47"/>
+      <circle cx="42.11" cy="19.46" r="0.21" fill="#818cf8" opacity="0.47"/>
+      <circle cx="41.49" cy="18.79" r="0.11" fill="#a5b4fc" opacity="0.57"/>
+      <circle cx="41.8" cy="19.04" r="0.28" fill="#818cf8" opacity="0.69"/>
+      <circle cx="41.32" cy="19.93" r="0.16" fill="#a5b4fc" opacity="0.52"/>
+      <circle cx="41.3" cy="21.44" r="0.12" fill="#c7d2fe" opacity="0.85"/>
+      <circle cx="41.21" cy="20.62" r="0.2" fill="#a5b4fc" opacity="0.81"/>
+      <circle cx="41.03" cy="20.57" r="0.14" fill="#f5f3ff" opacity="0.89"/>
+      <circle cx="41.48" cy="20.81" r="0.26" fill="#a5b4fc" opacity="0.96"/>
+      <circle cx="40" cy="22.37" r="0.25" fill="#f5f3ff" opacity="1"/>
+      <circle cx="39.82" cy="22.44" r="0.13" fill="#818cf8" opacity="0.46"/>
+      <circle cx="39.62" cy="21.59" r="0.31" fill="#f5f3ff" opacity="0.51"/>
+      <circle cx="37.48" cy="24.88" r="0.32" fill="#a5b4fc" opacity="0.48"/>
+      <circle cx="37.52" cy="24.96" r="0.24" fill="#818cf8" opacity="0.79"/>
+      <circle cx="38.16" cy="24.46" r="0.26" fill="#f5f3ff" opacity="0.61"/>
+      <circle cx="38.22" cy="25.21" r="0.26" fill="#c7d2fe" opacity="0.75"/>
+      <circle cx="38.17" cy="24.41" r="0.12" fill="#c7d2fe" opacity="0.53"/>
+      <circle cx="37.82" cy="24.6" r="0.19" fill="#c7d2fe" opacity="0.53"/>
+      <circle cx="35.66" cy="26.74" r="0.22" fill="#c7d2fe" opacity="0.96"/>
+      <circle cx="36.11" cy="26.35" r="0.32" fill="#c7d2fe" opacity="0.48"/>
+      <circle cx="35.59" cy="26.24" r="0.25" fill="#f5f3ff" opacity="0.97"/>
+      <circle cx="36.26" cy="25.98" r="0.24" fill="#a5b4fc" opacity="0.93"/>
+      <circle cx="36.36" cy="26.34" r="0.21" fill="#f5f3ff" opacity="0.58"/>
+      <circle cx="36.75" cy="25.68" r="0.26" fill="#a5b4fc" opacity="0.9"/>
+      <circle cx="33.95" cy="26.88" r="0.3" fill="#818cf8" opacity="0.8"/>
+      <circle cx="34.03" cy="28.38" r="0.29" fill="#818cf8" opacity="0.92"/>
+      <circle cx="34.64" cy="27.88" r="0.28" fill="#818cf8" opacity="0.86"/>
+      <circle cx="33.95" cy="28.34" r="0.22" fill="#f5f3ff" opacity="0.97"/>
+      <circle cx="31.54" cy="29.07" r="0.23" fill="#c7d2fe" opacity="0.79"/>
+      <circle cx="31.18" cy="29.11" r="0.29" fill="#a5b4fc" opacity="0.6"/>
+      <circle cx="31.63" cy="29" r="0.18" fill="#818cf8" opacity="0.78"/>
+      <circle cx="31.72" cy="29.2" r="0.28" fill="#a5b4fc" opacity="0.53"/>
+      <circle cx="31.95" cy="28.61" r="0.24" fill="#a5b4fc" opacity="0.5"/>
+      <circle cx="31.89" cy="28.83" r="0.15" fill="#f5f3ff" opacity="0.94"/>
+      <circle cx="28.7" cy="30.65" r="0.29" fill="#f5f3ff" opacity="0.46"/>
+      <circle cx="29.23" cy="31.2" r="0.19" fill="#a5b4fc" opacity="0.54"/>
+      <circle cx="28.33" cy="30.81" r="0.25" fill="#818cf8" opacity="0.98"/>
+      <circle cx="28.44" cy="30.87" r="0.31" fill="#c7d2fe" opacity="0.85"/>
+      <circle cx="28.9" cy="30.73" r="0.28" fill="#a5b4fc" opacity="0.63"/>
+      <circle cx="25.81" cy="32.26" r="0.26" fill="#818cf8" opacity="0.52"/>
+      <circle cx="26.49" cy="32.03" r="0.17" fill="#c7d2fe" opacity="0.53"/>
+      <circle cx="26.34" cy="31.62" r="0.28" fill="#a5b4fc" opacity="0.41"/>
+      <circle cx="26.19" cy="31.69" r="0.16" fill="#818cf8" opacity="0.76"/>
+      <circle cx="25.63" cy="31.69" r="0.26" fill="#818cf8" opacity="0.54"/>
+      <circle cx="26.33" cy="31.71" r="0.28" fill="#a5b4fc" opacity="0.55"/>
+      <circle cx="22.41" cy="33.69" r="0.11" fill="#818cf8" opacity="0.43"/>
+      <circle cx="22.77" cy="32.7" r="0.21" fill="#818cf8" opacity="0.48"/>
+      <circle cx="22.58" cy="32.36" r="0.26" fill="#c7d2fe" opacity="0.89"/>
+      <circle cx="20.37" cy="33.76" r="0.18" fill="#a5b4fc" opacity="0.98"/>
+      <circle cx="19.21" cy="33.61" r="0.14" fill="#c7d2fe" opacity="0.48"/>
+      <circle cx="20.34" cy="34.35" r="0.29" fill="#818cf8" opacity="0.46"/>
+      <circle cx="20.71" cy="33.89" r="0.18" fill="#818cf8" opacity="0.78"/>
+      <circle cx="19.75" cy="33.84" r="0.15" fill="#c7d2fe" opacity="0.61"/>
+      <circle cx="19.62" cy="33.76" r="0.13" fill="#a5b4fc" opacity="0.81"/>
+      <circle cx="17.61" cy="34.51" r="0.26" fill="#818cf8" opacity="0.67"/>
+      <circle cx="17.51" cy="34.17" r="0.32" fill="#f5f3ff" opacity="0.83"/>
+      <circle cx="16.93" cy="33.8" r="0.29" fill="#818cf8" opacity="0.42"/>
+      <circle cx="17.34" cy="34.35" r="0.22" fill="#a5b4fc" opacity="0.48"/>
+      <circle cx="14.43" cy="34.51" r="0.16" fill="#f5f3ff" opacity="0.72"/>
+      <circle cx="14.05" cy="35.21" r="0.32" fill="#c7d2fe" opacity="0.88"/>
+      <circle cx="14.28" cy="34.59" r="0.28" fill="#f5f3ff" opacity="0.89"/>
+      <circle cx="13.95" cy="35.19" r="0.18" fill="#c7d2fe" opacity="0.44"/>
+      <circle cx="12.64" cy="34.64" r="0.26" fill="#818cf8" opacity="0.54"/>
+      <circle cx="12.3" cy="34.68" r="0.27" fill="#818cf8" opacity="0.96"/>
+      <circle cx="12.35" cy="34.75" r="0.18" fill="#f5f3ff" opacity="0.47"/>
+      <circle cx="12.34" cy="34.74" r="0.11" fill="#818cf8" opacity="0.45"/>
+      <circle cx="12.7" cy="34.56" r="0.22" fill="#818cf8" opacity="0.49"/>
+      <circle cx="10.15" cy="34.52" r="0.13" fill="#c7d2fe" opacity="0.61"/>
+      <circle cx="10.4" cy="34.92" r="0.25" fill="#818cf8" opacity="0.89"/>
+      <circle cx="10.93" cy="34.85" r="0.26" fill="#a5b4fc" opacity="0.71"/>
+      <circle cx="7.87" cy="33.91" r="0.14" fill="#a5b4fc" opacity="0.63"/>
+      <circle cx="9.1" cy="34.15" r="0.22" fill="#f5f3ff" opacity="0.59"/>
+      <circle cx="8.6" cy="34.04" r="0.19" fill="#c7d2fe" opacity="0.62"/>
+      <circle cx="6.89" cy="33.15" r="0.26" fill="#c7d2fe" opacity="0.76"/>
+      <circle cx="7.06" cy="33.28" r="0.24" fill="#f5f3ff" opacity="0.87"/>
+      <circle cx="6.76" cy="33.61" r="0.3" fill="#a5b4fc" opacity="0.51"/>
+      <circle cx="6.98" cy="33.66" r="0.14" fill="#c7d2fe" opacity="0.78"/>
+      <circle cx="6.81" cy="32.82" r="0.2" fill="#c7d2fe" opacity="0.7"/>
+      <circle cx="7.09" cy="33.32" r="0.24" fill="#c7d2fe" opacity="1"/>
+      <circle cx="6.13" cy="31.57" r="0.11" fill="#f5f3ff" opacity="0.43"/>
+      <circle cx="6.57" cy="31.52" r="0.24" fill="#f5f3ff" opacity="0.72"/>
+      <circle cx="6.31" cy="32.01" r="0.14" fill="#818cf8" opacity="0.55"/>
+      <circle cx="6.43" cy="32.39" r="0.31" fill="#f5f3ff" opacity="0.6"/>
+    </g>
+    <g class="zvLock-planet-front">
+      <g class="zvLock-planet-glow">
+        <circle cx="0" cy="0" r="5.2" fill="url(#zvLockStar)"/>
+        <circle cx="0" cy="0" r="2.3" fill="url(#zvLockStarCore)"/>
+      </g>
+    </g>
     <path d="M1.4 13.4A12 12 0 0 1 13.4 1.4H30.5" fill="none" stroke="#ffffff" stroke-opacity="0.34" stroke-width="1.3" stroke-linecap="round"/>
     <rect x="0.7" y="0.7" width="46.6" height="46.6" rx="11.3" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.4"/>
   </g>
-  <text x="78" y="42" font-size="30" font-weight="700" letter-spacing="-0.8" fill="url(#zoText)">ZuniOS</text>
+  <text x="78" y="42" font-size="30" font-weight="700" letter-spacing="-0.8" fill="url(#zvLockText)">Zuniverse</text>
   <text x="79.5" y="59" font-size="10.5" font-weight="600" letter-spacing="4.2" fill="#a5b4fc" fill-opacity="0.6">PORTFOLIO OS</text>
 </svg>
