@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 118" width="372" height="118" fill="none"
+     font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+  <g fill="#8b949e" font-size="14">
+    <text x="0" y="16">A browser-native operating system for a portfolio —</text>
+    <text x="0" y="42">every project opens as a real, draggable window with</text>
+    <text x="0" y="68">a taskbar, start menu &amp; a working terminal.</text>
+    <text x="0" y="98" fill="#768390">Also hosts Zunex · Next.js · TypeScript · Framer Motion.</text>
+  </g>
+</svg>

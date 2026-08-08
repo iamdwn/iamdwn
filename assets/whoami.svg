@@ -6,9 +6,9 @@
     <clipPath id="c1"><rect x="22" y="49" width="0" height="20"><animate attributeName="width" from="0" to="82"  begin="0.3s"  dur="0.36s" fill="freeze"/></rect></clipPath>
     <clipPath id="c2"><rect x="22" y="75" width="0" height="20"><animate attributeName="width" from="0" to="272" begin="0.8s"  dur="1.35s" fill="freeze"/></rect></clipPath>
     <clipPath id="c3"><rect x="22" y="105" width="0" height="20"><animate attributeName="width" from="0" to="118" begin="2.35s" dur="0.55s" fill="freeze"/></rect></clipPath>
-    <clipPath id="c4"><rect x="22" y="131" width="0" height="20"><animate attributeName="width" from="0" to="296" begin="3.1s"  dur="1.45s" fill="freeze"/></rect></clipPath>
-    <clipPath id="c5"><rect x="22" y="161" width="0" height="20"><animate attributeName="width" from="0" to="118" begin="4.75s" dur="0.55s" fill="freeze"/></rect></clipPath>
-    <clipPath id="c6"><rect x="22" y="187" width="0" height="20"><animate attributeName="width" from="0" to="226" begin="5.5s"  dur="1.15s"  fill="freeze"/></rect></clipPath>
+    <clipPath id="c4"><rect x="22" y="131" width="0" height="20"><animate attributeName="width" from="0" to="316" begin="3.1s"  dur="1.54s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c5"><rect x="22" y="161" width="0" height="20"><animate attributeName="width" from="0" to="118" begin="4.84s" dur="0.55s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c6"><rect x="22" y="187" width="0" height="20"><animate attributeName="width" from="0" to="226" begin="5.59s"  dur="1.15s"  fill="freeze"/></rect></clipPath>
   </defs>
 
   <g clip-path="url(#win)">
@@ -35,18 +35,18 @@
     <text x="22" y="89" fill="#67E8F9" clip-path="url(#c2)">Dozun — 22 — Back-end Developer</text>
 
     <text x="22" y="119" clip-path="url(#c3)"><tspan fill="#22D3EE">$ </tspan><tspan fill="#c9d1d9">cat now.txt</tspan></text>
-    <text x="22" y="145" fill="#67E8F9" clip-path="url(#c4)">building Zunex · zunex.iamdwn.dev</text>
+    <text x="22" y="145" fill="#67E8F9" clip-path="url(#c4)">building ZuniOS · zunios.iamdwn.dev</text>
 
     <text x="22" y="175" clip-path="url(#c5)"><tspan fill="#22D3EE">$ </tspan><tspan fill="#c9d1d9">echo $MOTTO</tspan></text>
     <text x="22" y="201" fill="#F472B6" clip-path="url(#c6)">"Less noise, more signal."</text>
 
     <!-- final prompt + blinking cursor -->
     <text x="22" y="231" opacity="0"><tspan fill="#22D3EE">$ </tspan>
-      <animate attributeName="opacity" values="0;1" begin="7.2s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="7.25s" dur="0.01s" fill="freeze"/>
     </text>
     <rect x="38" y="220" width="9" height="15" fill="#22D3EE" opacity="0">
-      <animate attributeName="opacity" values="0;1" begin="7.2s" dur="0.01s" fill="freeze"/>
-      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" begin="7.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1" begin="7.25s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" begin="7.35s" repeatCount="indefinite"/>
     </rect>
   </g>
 </svg>
