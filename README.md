@@ -49,11 +49,11 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&theme=dark&hide_border=true&background=0D1117&ring=818CF8&fire=FB923C&currStreakLabel=A5B4FC&sideLabels=8B949E&dates=8B949E" />
 </div>
 
-<div align="center">
+<!-- <div align="center">
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=A5B4FC&line=818CF8&point=ffffff&area=true&area_color=6366F1&hide_border=true&title_color=A5B4FC&custom_title=Contribution%20Activity" />
-</div>
+</div> -->
 
-<!-- <img src="./assets/divider.svg" width="100%" /> -->
+<img src="./assets/divider.svg" width="100%" />
 
 ### Contributions
 
