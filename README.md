@@ -63,7 +63,7 @@
   <img alt="github-snake" src="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake.svg" />
 </picture>
 
-<img src="./assets/divider.svg" width="100%" />
+<!-- <img src="./assets/divider.svg" width="100%" /> -->
 
 <br />
 
