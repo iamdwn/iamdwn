@@ -53,7 +53,7 @@
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=A5B4FC&line=818CF8&point=ffffff&area=true&area_color=6366F1&hide_border=true&title_color=A5B4FC&custom_title=Contribution%20Activity" />
 </div>
 
-<img src="./assets/divider.svg" width="100%" />
+<!-- <img src="./assets/divider.svg" width="100%" /> -->
 
 ### Contributions
 
@@ -63,7 +63,7 @@
   <img alt="github-snake" src="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake.svg" />
 </picture>
 
-<!-- <img src="./assets/divider.svg" width="100%" /> -->
+<img src="./assets/divider.svg" width="100%" />
 
 <br />
 
