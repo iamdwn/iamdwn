@@ -42,17 +42,7 @@
 
 ### GitHub activity
 
-<<<<<<< HEAD
 <img src="./profile-3d-contrib/profile-graphite.svg" width="100%" alt="Dozun's GitHub contribution history in 3D." />
-=======
-<!-- <div align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=A5B4FC&line=818CF8&point=ffffff&area=true&area_color=6366F1&hide_border=true&title_color=A5B4FC&custom_title=Contribution%20Activity" />
-</div> -->
-
-<img src="./assets/divider.svg" width="100%" />
-
-### Contributions
->>>>>>> 2628a395512739fdecaa0abe3f82667cc7416677
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake-dark.svg" />
