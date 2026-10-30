@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { loadFoxSprite } from './fox-sprite.mjs';
 
 const assets = new URL('../assets/', import.meta.url);
 const groups = [
@@ -13,7 +14,7 @@ const icons = new Map(await Promise.all(groups.flatMap(group => group.items).map
   if (id === 'java') svg = svg.replaceAll('#0074BD', '#5db0df');
   return [id, `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`];
 })));
-const fox = (await readFile(new URL('zuni-idle.png', assets))).toString('base64');
+const fox = await loadFoxSprite();
 const logo = (await readFile(new URL('zunios-logo.svg', assets))).toString('base64');
 const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
 const text = (x, y, label, size = 18, color = '#d1d9e0', extra = '') => `<text x="${x}" y="${y}" font-size="${size}" fill="${color}" ${extra}>${esc(label)}</text>`;
@@ -95,7 +96,7 @@ function project(kind, mobile) {
       ${text(204, 17, 'ZuniOS', 9, '#a99cbf', 'text-anchor="end"')}
       <rect x="15" y="40" width="93" height="72" rx="4" fill="#0d1117" stroke="#343044"/>
       <path d="m27 55 5 4-5 4m10 0h6M27 78h49m-49 10h33" stroke="#b1a3dc" stroke-width="1.5"/>
-      <g transform="translate(121 37) scale(.9)"><g clip-path="url(#fox)"><image width="640" height="80" href="data:image/png;base64,${fox}" style="image-rendering:pixelated"/></g></g>
+      <g transform="translate(121 37) scale(.9)"><g clip-path="url(#fox)"><image width="640" height="80" href="${fox}" style="image-rendering:pixelated"/></g></g>
       <rect x="83" y="121" width="60" height="9" rx="3" fill="#454059"/>
     </g>`;
   } else {
