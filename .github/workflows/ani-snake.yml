@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Generate Snake Animation
       - name: Generate Snake Animation
         uses: Platane/snk@v3
         with:

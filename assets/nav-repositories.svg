@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="64" viewBox="0 0 300 64" role="img" aria-labelledby="title" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+<title id="title">Repositories</title>
+<style>@media(max-width:180px){.symbol,.arrow{display:none}.label{font-size:34px;text-anchor:middle;transform:translateX(79px)}}</style>
+<rect x=".5" y=".5" width="299" height="63" rx="8" fill="#141a22" stroke="#303b49"/>
+    <g class="symbol" transform="translate(25 20)" stroke="#edaa77" stroke-width="1.6" fill="none"><path d="M2 2h17v22H2Zm4 0v22m15-17h3v17h-3M10 7h5m-5 5h5"/></g>
+    <text x="71" y="40" font-size="22" fill="#dce3eb" class="label" font-weight="500">Repositories</text>
+    <g class="arrow"><path d="M265 37l13-13m-13 0h13v13" stroke="#f3a769" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

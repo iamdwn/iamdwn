@@ -1,61 +1,98 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duong's Pet</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-            background: black;
-        }
-        .chat-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        iframe {
-            width: 100%;
-            height: 100%; 
-            border: none;
-        }
-        .cover-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20px; 
-            background: black; 
-            z-index: 9999;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101214">
+  <meta name="description" content="Một góc nhỏ để trò chuyện cùng Bọ Chán — người bạn AI của Dozun. Ít ồn ào hơn, nhiều kết nối hơn.">
+  <title>Bọ Chán — A little less noise.</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-    <div class="chat-container">
-        <iframe id="botpress-frame" src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/03/07/20260603073144-4HN5XLI5.json"></iframe>
-        <div class="cover-footer"></div> 
-    </div>
-
-    <script>
-        setTimeout(() => {
-            const iframe = document.getElementById("botpress-frame");
-            if (iframe) {
-                try {
-                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    if (iframeDoc) {
-                        const footer = iframeDoc.querySelector('.bpComposerPoweredBy');
-                        if (footer) {
-                            footer.style.display = "none";
-                            console.log("Hidden");
-                        }
-                    }
-                } catch (e) {
-                    console.warn("Failed CORS.");
-                }
-            }
-        }, 3000);
-    </script>
+  <a class="skip-link" href="#conversation">Đến cuộc trò chuyện</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="https://github.com/iamdwn" aria-label="Dozun trên GitHub">
+        <img src="./assets/mark.svg" alt="" width="36" height="36">
+        <span>dozun<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="header-nav" aria-label="Liên kết chính">
+        <a href="https://zunios.iamdwn.dev/" target="_blank" rel="noopener noreferrer">Portfolio <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/iamdwn" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="Tắt hiệu ứng chuyển động" hidden>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 12 4-7 5 14 5-14 4 7"/></svg>
+          <span id="motion-label">Hiệu ứng: bật</span>
+        </button>
+      </nav>
+    </header>
+    <main class="experience" id="main">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="eyebrow"><span class="small-line" aria-hidden="true"></span> A PERSONAL AI COMPANION</div>
+        <h1 id="intro-title">Less noise.<br><span>More connection.</span></h1>
+        <p class="intro-description">Một khoảng lặng giữa những dòng code.<br>Ghé vào, kể Bọ Chán nghe một chút về ngày của bạn.</p>
+        <a class="mobile-chat-link" href="#conversation">Bắt đầu trò chuyện <span aria-hidden="true">↗</span></a>
+        <div class="sculpture" id="sculpture" aria-hidden="true">
+          <div class="sculpture-grid"></div>
+          <div class="sculpture-coordinate coordinate-top">FIG. 01 &nbsp; / &nbsp; THE QUIET CORE</div>
+          <div class="sculpture-coordinate coordinate-side">LESS NOISE, MORE SIGNAL</div>
+          <div class="sculpture-shadow"></div>
+          <div class="sculpture-parallax" id="sculpture-parallax">
+            <div class="orbital orbital-back"></div>
+            <div class="cube-float"><div class="cube">
+              <div class="cube-face cube-front"><span class="cube-symbol">b<span>c</span></span></div>
+              <div class="cube-face cube-back"></div>
+              <div class="cube-face cube-right"><span class="face-lines"></span></div>
+              <div class="cube-face cube-left"></div>
+              <div class="cube-face cube-top"><span class="face-cross">+</span></div>
+              <div class="cube-face cube-bottom"></div>
+            </div></div>
+            <div class="orbital orbital-front"><span class="orbit-point"></span></div>
+          </div>
+          <div class="sculpture-caption"><span class="caption-dot"></span> A small presence. A little perspective.</div>
+        </div>
+        <div class="intro-bottom">
+          <span class="intro-index">01 / 02</span>
+          <span>Built with curiosity.<br><strong>Made for conversation.</strong></span>
+          <a href="mailto:duong4work379@gmail.com" class="contact-link" aria-label="Gửi email cho Dozun">Say hello <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+      <section class="conversation" id="conversation" aria-labelledby="chat-title" tabindex="-1">
+        <div class="chat-header">
+          <div class="bot-identity">
+            <span class="bot-monogram" aria-hidden="true">b<span>c</span></span>
+            <div><h2 id="chat-title">Bọ Chán<span class="ai-label">AI</span></h2><p>Ở đây, nghe bạn kể.</p></div>
+          </div>
+          <div class="chat-actions">
+            <button class="icon-button" id="reload-chat" type="button" aria-label="Tải lại khung trò chuyện" title="Tải lại khung trò chuyện" hidden>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 18 17"/></svg>
+            </button>
+            <button class="icon-button" id="focus-toggle" type="button" aria-label="Bật chế độ tập trung" aria-pressed="false" title="Chế độ tập trung" hidden>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <div class="chat-loading" id="chat-loading" role="status" hidden>
+            <span class="loading-orbit" aria-hidden="true"></span><p>Đang mở một cuộc trò chuyện…</p><span>Bọ Chán sẽ xuất hiện ngay tại đây.</span>
+          </div>
+          <iframe id="botpress-frame" title="Trò chuyện với Bọ Chán" src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/03/07/20260603073144-4HN5XLI5.json" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="chat-footer">
+          <span class="connection-status" id="connection-status" role="status"><span class="status-dot" aria-hidden="true"></span><span id="status-text">TRÒ CHUYỆN CÙNG BỌ CHÁN</span></span>
+          <a href="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/03/07/20260603073144-4HN5XLI5.json" target="_blank" rel="noopener noreferrer" aria-label="Mở chatbot trong tab mới">Mở riêng <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="connection-help" id="connection-help" hidden><p>Khung chat đang tải lâu hơn dự kiến. Bạn có thể thử tải lại hoặc mở riêng ở liên kết phía trên.</p><button type="button" id="retry-chat">Thử lại <span aria-hidden="true">↻</span></button></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© <span id="year">2026</span> DOZUN <span class="footer-slash">/</span> AN EXPERIMENT IN CONNECTION</span>
+      <span class="footer-note">Một người bạn AI, một cuộc trò chuyện của riêng bạn.</span>
+      <a href="mailto:duong4work379@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
 </body>
 </html>

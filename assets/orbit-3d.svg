@@ -17,7 +17,6 @@
 
   <rect x="1" y="1" width="598" height="298" rx="14" fill="url(#vig)" stroke="#155e75" stroke-width="1"/>
 
-  <!-- twinkling particles -->
   <g fill="#22D3EE">
     <circle cx="80"  cy="60"  r="1.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.0s" repeatCount="indefinite"/></circle>
     <circle cx="520" cy="70"  r="1.6"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
@@ -30,17 +29,14 @@
 
   <g transform="translate(300,150)" filter="url(#glow)">
 
-    <!-- outer silhouette -->
     <circle r="86" fill="none" stroke="#22D3EE" stroke-width="1.1" opacity="0.55"/>
 
-    <!-- latitude rings -->
     <g stroke="#22D3EE" fill="none" stroke-width="1">
       <ellipse cx="0" cy="-44" rx="74" ry="11" opacity="0.45"/>
       <ellipse cx="0" cy="0"   rx="86" ry="17" opacity="0.6"/>
       <ellipse cx="0" cy="44"  rx="74" ry="11" opacity="0.45"/>
     </g>
 
-    <!-- rotating meridians: rx foreshortens to fake a spinning wireframe globe -->
     <g stroke="#22D3EE" fill="none" stroke-width="1.2">
       <ellipse cx="0" cy="0" ry="86">
         <animate attributeName="rx" values="86;3;86" keyTimes="0;0.5;1" dur="7s" repeatCount="indefinite"/>
@@ -68,12 +64,10 @@
       </ellipse>
     </g>
 
-    <!-- glowing pulsing core -->
     <circle r="7" fill="url(#coreg)">
       <animate attributeName="r" values="6;9;6" dur="2.4s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- tilted orbit with travelling electron -->
     <g transform="rotate(-22)">
       <ellipse cx="0" cy="0" rx="120" ry="40" stroke="#F472B6" stroke-width="1" fill="none" opacity="0.5"/>
       <circle r="3.4" fill="#F9A8D4">
@@ -81,7 +75,6 @@
           path="M120,0 A120,40 0 1,1 -120,0 A120,40 0 1,1 120,0"/>
       </circle>
     </g>
-    <!-- second orbit, opposite tilt -->
     <g transform="rotate(28)">
       <ellipse cx="0" cy="0" rx="108" ry="34" stroke="#22D3EE" stroke-width="1" fill="none" opacity="0.4"/>
       <circle r="3" fill="#67E8F9">

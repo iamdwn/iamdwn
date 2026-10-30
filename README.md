@@ -1,76 +1,51 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:6366F1,100:9333EA&height=140&section=header" />
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/fox-header-mobile.svg" />
+  <img src="./assets/fox-header.svg" width="100%" alt="Dozun — Back-end developer, with Zuni the pixel fox." />
+</picture>
 
-<p align="center">
-  <img src="./assets/name.svg" alt="Dozun" width="420" />
+<p>
+  <a href="https://zunios.iamdwn.dev/"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
+  <a href="https://github.com/iamdwn?tab=repositories"><img src="./assets/nav-repositories.svg" width="31%" alt="Repositories" /></a>
+  <a href="mailto:duong4work379@gmail.com"><img src="./assets/nav-email.svg" width="31%" alt="Email Dozun" /></a>
 </p>
 
-<h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=818CF8&center=true&vCenter=true&width=620&lines=Back-end+developer;No+applause%2C+only+silent+momentum.;Unseen%2C+yet+unfolding." alt="typing" />
-</h3>
+### Stack
 
-<p align="center">
-  <a href="https://zunios.iamdwn.dev/"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=A5B4FC&labelColor=0D1117" alt="Portfolio" /></a>
-  <a href="https://github.com/iamdwn"><img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=C7D2FE&labelColor=0D1117" alt="GitHub" /></a>
-  <a href="mailto:duong4work379@gmail.com"><img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=FB923C&labelColor=0D1117" alt="Email" /></a>
-</p>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stack-mobile.svg" />
+  <img src="./assets/stack.svg" width="100%" alt="Languages: C#, Java, TypeScript, JavaScript, C. Data: SQL Server, PostgreSQL, MySQL. Tools: Docker, Git, Linux, GitHub Actions." />
+</picture>
 
-<img src="./assets/divider.svg" width="100%" />
+### Projects
 
-### About me
+<a href="https://zunios.iamdwn.dev/">
+  <picture>
+    <source media="(max-width: 640px)" srcset="./assets/project-zunios-mobile.svg" />
+    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS — OS-style portfolio. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion. Open portfolio." />
+  </picture>
+</a>
 
-<p align="center">
-  <a href="https://github.com/iamdwn"><img src="./assets/avatar.svg" width="210" alt="Dozun" /></a>
-  &nbsp;&nbsp;
-  <img src="./assets/whoami.svg" width="470" alt="whoami — Dozun, 22, back-end developer. Stack — languages: C#, Java, TypeScript, JavaScript, C; databases: SQL Server, PostgreSQL, MySQL; devops: Docker, Git, Linux, GitHub Actions. Motto: less noise, more signal." />
-</p>
+<br />
 
-<img src="./assets/divider.svg" width="100%" />
-
-### Projects & Live Sites
-
-<p align="center">
-  <a href="https://zunios.iamdwn.dev/"><img src="./assets/zunios-logo.svg" width="400" alt="ZuniOS — portfolio OS" /></a>
-</p>
-
-<p align="center">
-  <a href="https://zunios.iamdwn.dev/"><img src="./assets/btn-visit.svg" width="232" alt="open zunios.iamdwn.dev" /></a>
-</p>
-
-<img src="./assets/divider.svg" width="100%" />
+<a href="https://iamdwn.github.io/iamdwn/">
+  <picture>
+    <source media="(max-width: 640px)" srcset="./assets/project-chat-mobile.svg" />
+    <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — personal chatbot, powered by Botpress. Open chat." />
+  </picture>
+</a>
 
 ### GitHub Stats
 
-<!-- <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=iamdwn&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&icon_color=818CF8&title_color=A5B4FC&text_color=c9d1d9" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamdwn&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=A5B4FC&text_color=c9d1d9" />
-</div> -->
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&amp;theme=dark&amp;hide_border=true&amp;background=0D1117&amp;ring=F47B39&amp;fire=F47B39&amp;currStreakLabel=F5B887&amp;sideLabels=AEB8C5&amp;dates=8B949E&amp;stroke=30363D&amp;currStreakNum=F0F2F4&amp;sideNums=F0F2F4" width="720" alt="Dozun's GitHub Stats: total contributions, current streak, and longest streak." />
+</p>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&theme=dark&hide_border=true&background=0D1117&ring=818CF8&fire=FB923C&currStreakLabel=A5B4FC&sideLabels=8B949E&dates=8B949E" />
-</div>
+### GitHub activity
 
-<div align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=iamdwn&bg_color=0D1117&color=A5B4FC&line=818CF8&point=ffffff&area=true&area_color=6366F1&hide_border=true&title_color=A5B4FC&custom_title=Contribution%20Activity" />
-</div>
-
-<img src="./assets/divider.svg" width="100%" />
-
-### Contributions
+<img src="./profile-3d-contrib/profile-graphite.svg" width="100%" alt="Dozun's GitHub contribution history in 3D." />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake.svg" />
+  <img src="https://raw.githubusercontent.com/iamdwn/iamdwn/output/github-snake.svg" width="100%" alt="GitHub contribution snake" />
 </picture>
-
-<img src="./assets/divider.svg" width="100%" />
-
-<br />
-
-<div align="center">
-  <a href="https://iamdwn.github.io/iamdwn">
-    <img src="./assets/btn-talk.svg" alt="chat --with bo-chan — Chat với Bọ Chán" width="324" />
-  </a>
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:9333EA,100:6366F1&height=120&section=footer" />
