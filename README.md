@@ -4,9 +4,9 @@
 </picture>
 
 <p>
-  <a href="https://zunios.iamdwn.dev/"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
-  <a href="https://github.com/iamdwn?tab=repositories"><img src="./assets/nav-repositories.svg" width="31%" alt="Repositories" /></a>
-  <a href="mailto:duong4work379@gmail.com"><img src="./assets/nav-email.svg" width="31%" alt="Email Dozun" /></a>
+  <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
+  <a href="https://github.com/iamdwn?tab=repositories" title="Browse GitHub repositories"><img src="./assets/nav-repositories.svg" width="31%" alt="Repositories" /></a>
+  <a href="mailto:duong4work379@gmail.com" title="Email Dozun"><img src="./assets/nav-email.svg" width="31%" alt="Email Dozun" /></a>
 </p>
 
 ### Stack
@@ -18,7 +18,7 @@
 
 ### Projects
 
-<a href="https://zunios.iamdwn.dev/">
+<a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-zunios-mobile.svg" />
     <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS — OS-style portfolio. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion. Open portfolio." />
@@ -27,7 +27,7 @@
 
 <br />
 
-<a href="https://iamdwn.github.io/iamdwn/">
+<a href="https://iamdwn.github.io/iamdwn/" title="Chat with Bọ Chán">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-chat-mobile.svg" />
     <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — personal chatbot, powered by Botpress. Open chat." />
