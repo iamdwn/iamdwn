@@ -4,7 +4,7 @@
 </picture>
 
 <p>
-  <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
+  <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS 2.0 portfolio"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
   <a href="https://github.com/iamdwn?tab=repositories" title="Browse GitHub repositories"><img src="./assets/nav-repositories.svg" width="31%" alt="Repositories" /></a>
   <a href="mailto:duong4work379@gmail.com" title="Email Dozun"><img src="./assets/nav-email.svg" width="31%" alt="Email Dozun" /></a>
 </p>
@@ -13,15 +13,15 @@
 
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stack-mobile.svg" />
-  <img src="./assets/stack.svg" width="100%" alt="Languages: C#, Java, TypeScript, JavaScript, C. Data: SQL Server, PostgreSQL, MySQL. Tools: Docker, Git, Linux, GitHub Actions." />
+  <img src="./assets/stack.svg" width="100%" alt="Languages: C#, Java, TypeScript, JavaScript, C. Data: SQL Server, PostgreSQL, MySQL, Oracle, MariaDB, MongoDB, Apache Hive. Tools: Docker, Git, Linux, GitHub Actions." />
 </picture>
 
 ### Projects
 
-<a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio">
+<a href="https://zunios.iamdwn.dev/" title="Open ZuniOS 2.0 portfolio">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-zunios-mobile.svg" />
-    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS — OS-style portfolio. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion. Open portfolio." />
+    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS 2.0 — OS-style portfolio. A fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion." />
   </picture>
 </a>
 

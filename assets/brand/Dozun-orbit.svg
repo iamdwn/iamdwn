@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="136 220 772 624" width="772" height="624" role="img" aria-label="Dozun orbital D">
+  <title>Dozun orbital D</title>
+  <defs>
+    <radialGradient id="dozun-body" cx=".96" cy=".86" r=".83">
+      <stop stop-color="#00c9f5"/>
+      <stop offset=".34" stop-color="#0062ea"/>
+      <stop offset=".62" stop-color="#042254"/>
+      <stop offset="1" stop-color="#030b1c"/>
+    </radialGradient>
+    <linearGradient id="dozun-fin" x1="0" y1="0" x2=".7" y2="1">
+      <stop stop-color="#03112a"/>
+      <stop offset=".55" stop-color="#08276c"/>
+      <stop offset="1" stop-color="#0576ff"/>
+    </linearGradient>
+    <linearGradient id="dozun-orbit" gradientUnits="userSpaceOnUse" x1="166" y1="728" x2="885" y2="441">
+      <stop stop-color="#0084ff"/>
+      <stop offset=".19" stop-color="#06143c"/>
+      <stop offset=".48" stop-color="#007eff"/>
+      <stop offset=".72" stop-color="#36d5ff"/>
+      <stop offset="1" stop-color="#085bff"/>
+    </linearGradient>
+    <mask id="dozun-cut" maskUnits="userSpaceOnUse" x="128" y="208" width="800" height="640">
+      <rect x="128" y="208" width="800" height="640" fill="white"/>
+      <path d="M890 438C763 546 358 749 195 742C138 739 147 704 179 660L225 599C183 666 163 709 185 720C219 737 572 576 890 438Z" fill="black" stroke="black" stroke-width="12" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g mask="url(#dozun-cut)">
+    <path d="M252 241H547C720 241 831 370 840 527C849 696 714 824 547 824H285V751L416 695V711H544C620 711 681 647 681 534C681 440 629 366 547 366H375Z" fill="url(#dozun-body)"/>
+    <path d="M427 407 306 473 178 686C230 648 318 619 427 597Z" fill="url(#dozun-fin)"/>
+  </g>
+  <path d="M890 438C763 546 358 749 195 742C138 739 147 704 179 660L225 599C183 666 163 709 185 720C219 737 572 576 890 438Z" fill="url(#dozun-orbit)"/>
+</svg>

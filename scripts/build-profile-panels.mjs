@@ -1,10 +1,12 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { loadFoxSprite } from './fox-sprite.mjs';
 
 const assets = new URL('../assets/', import.meta.url);
 const groups = [
   { name: 'Languages', items: [['csharp', 'C#'], ['java', 'Java'], ['typescript', 'TypeScript'], ['javascript', 'JavaScript'], ['c', 'C']] },
-  { name: 'Data', items: [['microsoftsqlserver', 'SQL Server'], ['postgresql', 'PostgreSQL'], ['mysql', 'MySQL']] },
+  { name: 'Data', items: [
+    ['microsoftsqlserver', 'SQL Server'], ['postgresql', 'PostgreSQL'], ['mysql', 'MySQL'],
+    ['oracle', 'Oracle'], ['mariadb', 'MariaDB'], ['mongodb', 'MongoDB'], ['apachehive', 'Apache Hive'],
+  ] },
   { name: 'Tools', items: [['docker', 'Docker'], ['git', 'Git'], ['linux', 'Linux'], ['githubactions', 'GitHub Actions']] },
 ];
 const icons = new Map(await Promise.all(groups.flatMap(group => group.items).map(async ([id]) => {
@@ -12,13 +14,15 @@ const icons = new Map(await Promise.all(groups.flatMap(group => group.items).map
   if (id === 'mysql') svg = svg.replaceAll('#00618A', '#73bdd5');
   if (id === 'microsoftsqlserver') svg = svg.replaceAll('#ee352c', '#f08b7e');
   if (id === 'java') svg = svg.replaceAll('#0074BD', '#5db0df');
+  if (id === 'oracle') svg = svg.replace('0 0 128 128', '0 50.5 27 27');
+  if (id === 'mariadb') svg = svg.replaceAll('#003545', '#82b8c4');
+  if (id === 'apachehive') svg = svg.replace('<path ', '<path fill="#f3d858" ');
   return [id, `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`];
 })));
-const fox = await loadFoxSprite();
 const logo = (await readFile(new URL('zunios-logo.svg', assets))).toString('base64');
+const farm = (await readFile(new URL('zunios-farm.jpg', assets))).toString('base64');
 const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
 const text = (x, y, label, size = 18, color = '#d1d9e0', extra = '') => `<text x="${x}" y="${y}" font-size="${size}" fill="${color}" ${extra}>${esc(label)}</text>`;
-const arrow = (x, y, size = 18) => `<path d="M${x} ${y + size}l${size}-${size}m-${size} 0h${size}v${size}" stroke="#f3a769" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>`;
 const icon = (id, x, y, size) => `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${icons.get(id)}"/>`;
 
 function svg(width, height, title, body, extra = '') {
@@ -32,7 +36,8 @@ ${body}
 function stack(mobile) {
   const w = mobile ? 640 : 1000;
   const heights = groups.map(group => 80 + Math.ceil(group.items.length / 2) * 64);
-  const h = mobile ? heights.reduce((sum, height) => sum + height, 0) : 336;
+  const desktopRows = Math.max(...groups.map(group => group.items.length));
+  const h = mobile ? heights.reduce((sum, height) => sum + height, 0) : 96 + desktopRows * 48;
   const column = w / 3;
   let body = `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="#12171e" stroke="#2a333f"/>`;
   body += '<g font-family="Arial,Helvetica,sans-serif">';
@@ -59,7 +64,8 @@ function stack(mobile) {
     mobileTop += heights[index];
   });
   body += '</g>';
-  return svg(w, h, 'Stack — C#, Java, TypeScript, JavaScript, C; SQL Server, PostgreSQL, MySQL; Docker, Git, Linux, GitHub Actions.', body);
+  const technologies = groups.map(group => group.items.map(([, name]) => name).join(', ')).join('; ');
+  return svg(w, h, `Stack — ${technologies}.`, body);
 }
 
 function project(kind, mobile) {
@@ -73,11 +79,13 @@ function project(kind, mobile) {
   const footerY = h - padding;
   const artCenterX = w - (mobile ? 128 : 184);
   const artCenterY = 96;
+  let defs = '';
   let body = `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="#12171e" stroke="#2a333f"/>`;
-  body += `<path d="M${padding} 1h64" stroke="${isOS ? '#a99bf5' : '#f3a769'}" stroke-width="2"/>`;
+  body += `<path d="M${padding} 1h64" stroke="${isOS ? '#71cbe1' : '#f3a769'}" stroke-width="2"/>`;
   body += '<g font-family="Arial,Helvetica,sans-serif">';
   if (isOS) {
-    body += `<image x="${padding - 4 * logoScale}" y="${padding - 8 * logoScale}" width="${220 * logoScale}" height="${72 * logoScale}" href="data:image/svg+xml;base64,${logo}"/>`;
+    body += `<image x="${padding}" y="${padding}" width="${headerSize}" height="${headerSize}" href="data:image/svg+xml;base64,${logo}" style="image-rendering:pixelated"/>`;
+    body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'ZuniOS 2.0', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
     body += text(padding, descriptionY, 'OS-style portfolio', mobile ? 25 : 19, '#b2bdca');
     if (mobile) {
       body += text(padding, footerY - 30, 'Next.js  ·  TypeScript  ·  Tailwind CSS', 21, '#9aa7b7');
@@ -85,20 +93,11 @@ function project(kind, mobile) {
     } else {
       body += text(padding, footerY, 'Next.js  ·  TypeScript  ·  Tailwind CSS  ·  Zustand  ·  Framer Motion', 15, '#9aa7b7');
     }
-    const s = mobile ? .66 : 1;
-    const x = artCenterX - 233 * s / 2;
-    const y = artCenterY - 146 * s / 2;
-    body += `<g transform="translate(${x} ${y}) scale(${s})">
-      <rect x="9" y="9" width="224" height="137" rx="9" fill="#0a0e14" stroke="#292d3d"/>
-      <rect width="224" height="137" rx="9" fill="#171927" stroke="#47415f"/>
-      <path d="M0 25h224" stroke="#47415f"/>
-      <g fill="#8e87ae"><circle cx="15" cy="13" r="2.5"/><circle cx="25" cy="13" r="2.5"/><circle cx="35" cy="13" r="2.5"/></g>
-      ${text(204, 17, 'ZuniOS', 9, '#a99cbf', 'text-anchor="end"')}
-      <rect x="15" y="40" width="93" height="72" rx="4" fill="#0d1117" stroke="#343044"/>
-      <path d="m27 55 5 4-5 4m10 0h6M27 78h49m-49 10h33" stroke="#b1a3dc" stroke-width="1.5"/>
-      <g transform="translate(121 37) scale(.9)"><g clip-path="url(#fox)"><image width="640" height="80" href="${fox}" style="image-rendering:pixelated"/></g></g>
-      <rect x="83" y="121" width="60" height="9" rx="3" fill="#454059"/>
-    </g>`;
+    const thumbWidth = mobile ? 208 : 256;
+    const thumbHeight = thumbWidth * 9 / 16;
+    const thumbBox = `x="${w - padding - thumbWidth}" y="${artCenterY - thumbHeight / 2}" width="${thumbWidth}" height="${thumbHeight}"`;
+    defs = `<defs><clipPath id="farm-crop"><rect ${thumbBox} rx="9"/></clipPath></defs>`;
+    body += `<image ${thumbBox} clip-path="url(#farm-crop)" href="data:image/jpeg;base64,${farm}"/>`;
   } else {
     body += `<g transform="translate(${padding} ${padding}) scale(${logoScale})"><rect width="56" height="56" rx="13" fill="#30231c" stroke="#65452f"/><path d="M14 15h28v20H28l-9 7v-7h-5Z" fill="none" stroke="#f0a66e" stroke-width="2"/><path d="m21 23 4 3-4 3m9 0h5" stroke="#f0a66e" stroke-width="2" fill="none"/></g>`;
     body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'Bọ Chán', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
@@ -114,8 +113,7 @@ function project(kind, mobile) {
     </g>`;
   }
   body += '</g>';
-  body += arrow(w - padding - 17, padding, 17);
-  return svg(w, h, isOS ? 'ZuniOS — OS-style portfolio. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — personal chatbot powered by Botpress.', body, '<defs><clipPath id="fox"><rect width="80" height="80"/></clipPath></defs>');
+  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. A fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — personal chatbot powered by Botpress.', body, defs);
 }
 
 function nav(kind, label) {
@@ -126,8 +124,7 @@ function nav(kind, label) {
   };
   return svg(300, 64, label, `<rect x=".5" y=".5" width="299" height="63" rx="8" fill="${kind === 'portfolio' ? '#251d18' : '#141a22'}" stroke="${kind === 'portfolio' ? '#754b30' : '#303b49'}"/>
     <g class="symbol" transform="translate(25 20)" stroke="#edaa77" stroke-width="1.6" fill="none">${symbols[kind]}</g>
-    ${text(71, 40, label, 22, '#dce3eb', 'class="label" font-weight="500"')}
-    <g class="arrow">${arrow(265, 24, 13)}</g>`, '<style>@media(max-width:180px){.symbol,.arrow{display:none}.label{font-size:34px;text-anchor:middle;transform:translateX(79px)}}</style>');
+    ${text(71, 40, label, 22, '#dce3eb', 'class="label" font-weight="500"')}`, '<style>@media(max-width:180px){.symbol{display:none}.label{font-size:34px;text-anchor:middle;transform:translateX(79px)}}</style>');
 }
 
 for (const mobile of [false, true]) {
