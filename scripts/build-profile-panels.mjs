@@ -21,6 +21,7 @@ const icons = new Map(await Promise.all(groups.flatMap(group => group.items).map
 })));
 const logo = (await readFile(new URL('zunios-logo.svg', assets))).toString('base64');
 const farm = (await readFile(new URL('zunios-farm.jpg', assets))).toString('base64');
+const wantedPoster = (await readFile(new URL('zunios-wanted.png', assets))).toString('base64');
 const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
 const text = (x, y, label, size = 18, color = '#d1d9e0', extra = '') => `<text x="${x}" y="${y}" font-size="${size}" fill="${color}" ${extra}>${esc(label)}</text>`;
 const icon = (id, x, y, size) => `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${icons.get(id)}"/>`;
@@ -93,10 +94,14 @@ function project(kind, mobile) {
     } else {
       body += text(padding, footerY, 'Next.js  ·  TypeScript  ·  Tailwind CSS  ·  Zustand  ·  Framer Motion', 15, '#9aa7b7');
     }
-    const thumbWidth = mobile ? 208 : 256;
+    const thumbWidth = mobile ? 192 : 256;
     const thumbHeight = thumbWidth * 9 / 16;
-    const thumbBox = `x="${w - padding - thumbWidth}" y="${artCenterY - thumbHeight / 2}" width="${thumbWidth}" height="${thumbHeight}"`;
+    const farmX = w - padding - thumbWidth;
+    const thumbY = artCenterY - thumbHeight / 2;
+    const posterWidth = thumbHeight * 29 / 33;
+    const thumbBox = `x="${farmX}" y="${thumbY}" width="${thumbWidth}" height="${thumbHeight}"`;
     defs = `<defs><clipPath id="farm-crop"><rect ${thumbBox} rx="9"/></clipPath></defs>`;
+    body += `<image x="${farmX - 12 - posterWidth}" y="${thumbY}" width="${posterWidth}" height="${thumbHeight}" href="data:image/png;base64,${wantedPoster}" style="image-rendering:pixelated"/>`;
     body += `<image ${thumbBox} clip-path="url(#farm-crop)" href="data:image/jpeg;base64,${farm}"/>`;
   } else {
     body += `<g transform="translate(${padding} ${padding}) scale(${logoScale})"><rect width="56" height="56" rx="13" fill="#30231c" stroke="#65452f"/><path d="M14 15h28v20H28l-9 7v-7h-5Z" fill="none" stroke="#f0a66e" stroke-width="2"/><path d="m21 23 4 3-4 3m9 0h5" stroke="#f0a66e" stroke-width="2" fill="none"/></g>`;
@@ -113,7 +118,7 @@ function project(kind, mobile) {
     </g>`;
   }
   body += '</g>';
-  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. A fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — personal chatbot powered by Botpress.', body, defs);
+  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — personal chatbot powered by Botpress.', body, defs);
 }
 
 function nav(kind, label) {

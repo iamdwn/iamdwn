@@ -21,7 +21,7 @@
 <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS 2.0 portfolio">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-zunios-mobile.svg" />
-    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS 2.0 — OS-style portfolio. A fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion." />
+    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion." />
   </picture>
 </a>
 
@@ -37,7 +37,7 @@
 ### GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamdwn&amp;theme=dark&amp;hide_border=true&amp;background=0D1117&amp;ring=F47B39&amp;fire=F47B39&amp;currStreakLabel=F5B887&amp;sideLabels=AEB8C5&amp;dates=8B949E&amp;stroke=30363D&amp;currStreakNum=F0F2F4&amp;sideNums=F0F2F4" width="720" alt="Dozun's GitHub Stats: total contributions, current streak, and longest streak." />
+  <img src="./assets/github-streak.svg" width="720" alt="Dozun's GitHub Stats: total contributions, current streak, and longest streak." />
 </p>
 
 ### GitHub activity

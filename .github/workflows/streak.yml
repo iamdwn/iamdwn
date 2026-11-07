@@ -1,0 +1,31 @@
+name: Update GitHub streak
+
+on:
+  schedule:
+    - cron: "27 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build-streak.mjs
+      - .github/workflows/streak.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-streak
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build streak card
+        run: node scripts/build-streak.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: assets/github-streak.svg
+          commit_message: "chore: update GitHub streak"
