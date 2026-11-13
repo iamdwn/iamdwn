@@ -4,7 +4,7 @@
 </picture>
 
 <p>
-  <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS 2.0 portfolio"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
+  <a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio"><img src="./assets/nav-portfolio.svg" width="31%" alt="Portfolio" /></a>
   <a href="https://github.com/iamdwn?tab=repositories" title="Browse GitHub repositories"><img src="./assets/nav-repositories.svg" width="31%" alt="Repositories" /></a>
   <a href="mailto:duong4work379@gmail.com" title="Email Dozun"><img src="./assets/nav-email.svg" width="31%" alt="Email Dozun" /></a>
 </p>
@@ -18,19 +18,19 @@
 
 ### Projects
 
-<a href="https://zunios.iamdwn.dev/" title="Open ZuniOS 2.0 portfolio">
+<a href="https://zunios.iamdwn.dev/" title="Open ZuniOS portfolio">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-zunios-mobile.svg" />
-    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion." />
+    <img src="./assets/project-zunios.svg" width="100%" alt="ZuniOS — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion." />
   </picture>
 </a>
 
 <br />
 
-<a href="https://iamdwn.github.io/iamdwn/" title="Ghé nhà Bọ Chán">
+<a href="https://iamdwn.github.io/iamdwn/" title="Chat with Bọ Chán">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-chat-mobile.svg" />
-    <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — Ghé nhà, kể Bọ nghe. A corgi chatbot powered by Botpress, with a preview of Bọ’s home." />
+    <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — Drop by. Say hello. A corgi chatbot powered by Botpress, with a preview of Bọ’s home." />
   </picture>
 </a>
 

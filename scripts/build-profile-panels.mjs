@@ -87,7 +87,7 @@ function project(kind, mobile) {
   body += '<g font-family="Arial,Helvetica,sans-serif">';
   if (isOS) {
     body += `<image x="${padding}" y="${padding}" width="${headerSize}" height="${headerSize}" href="data:image/svg+xml;base64,${logo}" style="image-rendering:pixelated"/>`;
-    body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'ZuniOS 2.0', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
+    body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'ZuniOS', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
     body += text(padding, descriptionY, 'OS-style portfolio', mobile ? 25 : 19, '#b2bdca');
     if (mobile) {
       body += text(padding, footerY - 30, 'Next.js  ·  TypeScript  ·  Tailwind CSS', 21, '#9aa7b7');
@@ -117,7 +117,7 @@ function project(kind, mobile) {
     body += `<image x="${padding}" y="${padding}" width="${headerSize}" height="${headerSize}" href="data:image/jpeg;base64,${boAvatar}" clip-path="url(#bo-avatar)" preserveAspectRatio="xMidYMid slice"/>`;
     body += `<circle cx="${padding + headerSize / 2}" cy="${padding + headerSize / 2}" r="${headerSize / 2 + .5}" fill="none" stroke="#8d7960"/>`;
     body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'Bọ Chán', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
-    body += text(padding, descriptionY, 'Ghé nhà, kể Bọ nghe.', mobile ? 25 : 19, '#c3c8bc');
+    body += text(padding, descriptionY, 'Drop by. Say hello.', mobile ? 25 : 19, '#c3c8bc');
     body += text(padding, footerY, 'Botpress', mobile ? 21 : 15, '#9aa7b7');
     const roomHeight = thumbWidth * 1.25;
     const roomY = thumbY - (roomHeight - thumbHeight) * .55;
@@ -125,7 +125,7 @@ function project(kind, mobile) {
     body += `<rect ${thumbBox} rx="12" fill="none" stroke="#685b47"/>`;
   }
   body += '</g>';
-  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — Ghé nhà, kể Bọ nghe. A corgi chatbot powered by Botpress.', body, defs);
+  return svg(w, h, isOS ? 'ZuniOS — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — Drop by. Say hello. A corgi chatbot powered by Botpress.', body, defs);
 }
 
 function nav(kind, label) {

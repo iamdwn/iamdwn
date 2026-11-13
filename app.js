@@ -27,7 +27,7 @@
     help.hidden = false;
     ready = false;
     newChat.disabled = true;
-    setStatus('error', navigator.onLine ? 'Kết nối đang gián đoạn' : 'Bạn đang ngoại tuyến');
+    setStatus('error', navigator.onLine ? 'Connection interrupted' : "You're offline");
   }
 
   const connectionTimeout = window.setTimeout(showConnectionError, 22000);
@@ -46,10 +46,10 @@
       const available = ready && input && !input.disabled;
       newChat.disabled = !available;
       const labels = {
-        '.bpComposerInput': 'Tin nhắn gửi Bọ',
-        '.bpComposerSendButton': 'Gửi tin nhắn',
-        '.bpComposerUploadButton': 'Đính kèm tệp',
-        '.bpComposerVoiceButton': 'Nhập bằng giọng nói',
+        '.bpComposerInput': 'Message Bọ Chán',
+        '.bpComposerSendButton': 'Send message',
+        '.bpComposerUploadButton': 'Attach files',
+        '.bpComposerVoiceButton': 'Voice input',
       };
       for (const [selector, label] of Object.entries(labels)) {
         root.querySelector(selector)?.setAttribute('aria-label', label);
@@ -106,7 +106,7 @@
         newChat.disabled = false;
         connectChatInterface();
         welcome.hidden = hasMessages;
-        setStatus('ready', 'Đã kết nối');
+        setStatus('ready', 'Connected');
       });
       window.botpress.on('message', () => {
         hasMessages = true;
@@ -120,11 +120,11 @@
           botName: 'Bọ Chán',
           botDescription: '',
           botAvatar: new URL('./assets/chat/bo-chan-avatar.jpg', document.baseURI).href,
-          composerPlaceholder: 'Nhắn tin cho Bọ…',
+          composerPlaceholder: 'Message Bọ Chán…',
           embeddedChatId: 'bp-embedded-webchat',
-          themeMode: 'light',
+          themeMode: 'dark',
           fontFamily: 'inter',
-          color: '#334155',
+          color: '#64748b',
           variant: 'soft',
           headerVariant: 'solid',
           radius: 2,

@@ -1,7 +1,7 @@
 .bpReset { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; }
 .bpContainer {
-  background: #fff !important;
-  color: #242931 !important;
+  background: #161b22 !important;
+  color: #e6edf3 !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -10,19 +10,19 @@
 .bpMessageListContainer { padding: 24px !important; background: transparent !important; }
 .bpMessageContainer, .bpMessageBlocksTextText { font-size: 14px !important; line-height: 1.65 !important; }
 .bpMessageBlocksBubble { border-radius: 10px !important; box-shadow: none !important; }
-.bpComposerContainer { padding: 12px 24px 16px !important; background: #fff !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+.bpComposerContainer { padding: 12px 24px 16px !important; background: #161b22 !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 .bpComposerContainer:focus-within { outline: none !important; }
 .bpComposerInputContainer {
-  border: 1px solid #dce0e5 !important;
-  background: #fafbfc !important;
+  border: 1px solid #30363d !important;
+  background: #0d1117 !important;
   border-radius: 8px !important;
   box-shadow: none !important;
   align-items: center !important;
   min-height: 58px !important;
 }
-.bpComposerInputContainer:focus-within { border-color: #77869b !important; box-shadow: 0 0 0 1px #77869b !important; }
-.bpComposerInput { padding: 8px 12px !important; font-size: 15px !important; line-height: 22px !important; color: #242931 !important; }
-.bpComposerInput::placeholder { color: #737d8a !important; }
+.bpComposerInputContainer:focus-within { border-color: #8b9db5 !important; box-shadow: 0 0 0 1px #8b9db5 !important; }
+.bpComposerInput { padding: 8px 12px !important; font-size: 15px !important; line-height: 22px !important; color: #e6edf3 !important; }
+.bpComposerInput::placeholder { color: #9da7b3 !important; }
 .bpComposerSendButton, .bpComposerVoiceButton, .bpComposerUploadButton { flex-shrink: 0 !important; }
 @media (max-width: 600px) {
   .bpMessageListContainer { padding: 16px !important; }
