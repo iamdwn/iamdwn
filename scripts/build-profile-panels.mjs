@@ -22,6 +22,8 @@ const icons = new Map(await Promise.all(groups.flatMap(group => group.items).map
 const logo = (await readFile(new URL('zunios-logo.svg', assets))).toString('base64');
 const farm = (await readFile(new URL('zunios-farm.jpg', assets))).toString('base64');
 const wantedPoster = (await readFile(new URL('zunios-wanted.png', assets))).toString('base64');
+const boAvatar = (await readFile(new URL('chat/bo-chan-avatar.jpg', assets))).toString('base64');
+const boRoom = (await readFile(new URL('chat/bo-chan-room.webp', assets))).toString('base64');
 const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
 const text = (x, y, label, size = 18, color = '#d1d9e0', extra = '') => `<text x="${x}" y="${y}" font-size="${size}" fill="${color}" ${extra}>${esc(label)}</text>`;
 const icon = (id, x, y, size) => `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${icons.get(id)}"/>`;
@@ -78,11 +80,10 @@ function project(kind, mobile) {
   const logoScale = headerSize / 56;
   const descriptionY = mobile ? 144 : 120;
   const footerY = h - padding;
-  const artCenterX = w - (mobile ? 128 : 184);
   const artCenterY = 96;
   let defs = '';
   let body = `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="#12171e" stroke="#2a333f"/>`;
-  body += `<path d="M${padding} 1h64" stroke="${isOS ? '#71cbe1' : '#f3a769'}" stroke-width="2"/>`;
+  body += `<path d="M${padding} 1h64" stroke="${isOS ? '#71cbe1' : '#a9b58f'}" stroke-width="2"/>`;
   body += '<g font-family="Arial,Helvetica,sans-serif">';
   if (isOS) {
     body += `<image x="${padding}" y="${padding}" width="${headerSize}" height="${headerSize}" href="data:image/svg+xml;base64,${logo}" style="image-rendering:pixelated"/>`;
@@ -104,21 +105,27 @@ function project(kind, mobile) {
     body += `<image x="${farmX - 12 - posterWidth}" y="${thumbY}" width="${posterWidth}" height="${thumbHeight}" href="data:image/png;base64,${wantedPoster}" style="image-rendering:pixelated"/>`;
     body += `<image ${thumbBox} clip-path="url(#farm-crop)" href="data:image/jpeg;base64,${farm}"/>`;
   } else {
-    body += `<g transform="translate(${padding} ${padding}) scale(${logoScale})"><rect width="56" height="56" rx="13" fill="#30231c" stroke="#65452f"/><path d="M14 15h28v20H28l-9 7v-7h-5Z" fill="none" stroke="#f0a66e" stroke-width="2"/><path d="m21 23 4 3-4 3m9 0h5" stroke="#f0a66e" stroke-width="2" fill="none"/></g>`;
+    const thumbWidth = mobile ? 208 : 256;
+    const thumbHeight = mobile ? 192 : 144;
+    const thumbY = (h - thumbHeight) / 2;
+    const thumbX = w - padding - thumbWidth;
+    const thumbBox = `x="${thumbX}" y="${thumbY}" width="${thumbWidth}" height="${thumbHeight}"`;
+    defs = `<defs>
+      <clipPath id="bo-avatar"><circle cx="${padding + headerSize / 2}" cy="${padding + headerSize / 2}" r="${headerSize / 2}"/></clipPath>
+      <clipPath id="bo-room"><rect ${thumbBox} rx="12"/></clipPath>
+    </defs>`;
+    body += `<image x="${padding}" y="${padding}" width="${headerSize}" height="${headerSize}" href="data:image/jpeg;base64,${boAvatar}" clip-path="url(#bo-avatar)" preserveAspectRatio="xMidYMid slice"/>`;
+    body += `<circle cx="${padding + headerSize / 2}" cy="${padding + headerSize / 2}" r="${headerSize / 2 + .5}" fill="none" stroke="#8d7960"/>`;
     body += text(padding + 74 * logoScale, padding + headerSize / 2 + (mobile ? 12 : 10), 'Bọ Chán', mobile ? 36 : 31, '#edf1f5', 'font-weight="600" letter-spacing="-.8"');
-    body += text(padding, descriptionY, 'Personal chatbot', mobile ? 25 : 19, '#b2bdca');
+    body += text(padding, descriptionY, 'Ghé nhà, kể Bọ nghe.', mobile ? 25 : 19, '#c3c8bc');
     body += text(padding, footerY, 'Botpress', mobile ? 21 : 15, '#9aa7b7');
-    const s = mobile ? .7 : 1;
-    const x = artCenterX - 168 * s / 2;
-    const y = artCenterY - 136 * s / 2;
-    body += `<g transform="translate(${x} ${y}) scale(${s})" shape-rendering="crispEdges">
-      <path d="M0 16h16V0h136v16h16v72h-16v16H80v16H64v16H48v-32H16V88H0Z" fill="#2a211c" stroke="#a36840" stroke-width="2"/>
-      <path d="m32 37 16 16-16 16m34 0h32" fill="none" stroke="#eaaa78" stroke-width="5"/>
-      <rect x="115" y="56" width="12" height="12" fill="#eaaa78"/>
-    </g>`;
+    const roomHeight = thumbWidth * 1.25;
+    const roomY = thumbY - (roomHeight - thumbHeight) * .55;
+    body += `<image x="${thumbX}" y="${roomY}" width="${thumbWidth}" height="${roomHeight}" href="data:image/webp;base64,${boRoom}" clip-path="url(#bo-room)"/>`;
+    body += `<rect ${thumbBox} rx="12" fill="none" stroke="#685b47"/>`;
   }
   body += '</g>';
-  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — personal chatbot powered by Botpress.', body, defs);
+  return svg(w, h, isOS ? 'ZuniOS 2.0 — OS-style portfolio. Dozun’s wanted poster and the fox on the floating island. Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion.' : 'Bọ Chán — Ghé nhà, kể Bọ nghe. A corgi chatbot powered by Botpress.', body, defs);
 }
 
 function nav(kind, label) {

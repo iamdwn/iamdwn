@@ -1,118 +1,144 @@
 (() => {
   'use strict';
 
-  const frame = document.getElementById('botpress-frame');
   const loading = document.getElementById('chat-loading');
+  const welcome = document.getElementById('chat-welcome');
   const help = document.getElementById('connection-help');
   const status = document.getElementById('connection-status');
   const statusText = document.getElementById('status-text');
-  const reload = document.getElementById('reload-chat');
-  const focus = document.getElementById('focus-toggle');
-  const motion = document.getElementById('motion-toggle');
-  const motionLabel = document.getElementById('motion-label');
-  const sculpture = document.getElementById('sculpture');
-  const parallax = document.getElementById('sculpture-parallax');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-  let timeout;
-  let motionPreference = null;
-  let motionPaused = reducedMotion.matches;
+  const newChat = document.getElementById('new-chat');
+  const configUrl = 'https://files.bpcontent.cloud/2026/06/03/07/20260603073144-4HN5XLI5.json';
+  let ready = false;
+  let hasMessages = false;
+  let chatCss = '';
+  let chatObserver;
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-  [reload, focus, motion].forEach(button => { button.hidden = false; });
+  newChat.hidden = false;
 
-  function setStatus(state, message) {
+  function setStatus(state, label) {
     status.dataset.state = state;
-    statusText.textContent = message;
+    statusText.textContent = label;
   }
 
-  function beginLoading() {
-    window.clearTimeout(timeout);
-    loading.hidden = false;
-    help.hidden = true;
-    reload.disabled = true;
-    setStatus('loading', 'ĐANG TẢI KHUNG TRÒ CHUYỆN');
-    timeout = window.setTimeout(() => {
-      loading.hidden = true;
-      help.hidden = false;
-      reload.disabled = false;
-      setStatus('slow', 'KẾT NỐI ĐANG CHẬM');
-    }, 18000);
-  }
-
-  function finishLoading() {
-    window.clearTimeout(timeout);
+  function showConnectionError() {
+    window.clearTimeout(connectionTimeout);
     loading.hidden = true;
-    help.hidden = true;
-    reload.disabled = false;
-    setStatus('loaded', 'KHUNG TRÒ CHUYỆN ĐÃ TẢI');
+    welcome.hidden = true;
+    help.hidden = false;
+    ready = false;
+    newChat.disabled = true;
+    setStatus('error', navigator.onLine ? 'Kết nối đang gián đoạn' : 'Bạn đang ngoại tuyến');
   }
-  frame.addEventListener('load', finishLoading);
 
-  function retryChat() {
-    beginLoading();
-    frame.src = frame.src;
-  }
-  reload.addEventListener('click', retryChat);
-  document.getElementById('retry-chat').addEventListener('click', retryChat);
+  const connectionTimeout = window.setTimeout(showConnectionError, 22000);
+  document.getElementById('retry-chat').addEventListener('click', () => window.location.reload());
+  window.addEventListener('offline', showConnectionError);
 
-  function setFocusMode(enabled) {
-    document.body.classList.toggle('focus-mode', enabled);
-    focus.setAttribute('aria-pressed', String(enabled));
-    focus.setAttribute('aria-label', enabled ? 'Thoát chế độ tập trung' : 'Bật chế độ tập trung');
-    focus.title = enabled ? 'Thoát chế độ tập trung' : 'Chế độ tập trung';
+  function connectChatInterface() {
+    const host = document.getElementById('webchat-root');
+    const root = host?.shadowRoot;
+    if (!root) return;
+    host.removeAttribute('aria-hidden');
+    const syncInterface = () => {
+      hasMessages = Boolean(root.querySelector('.bpMessageBlocksBubble'));
+      welcome.hidden = !ready || hasMessages;
+      const input = root.querySelector('.bpComposerInput');
+      const available = ready && input && !input.disabled;
+      newChat.disabled = !available;
+      const labels = {
+        '.bpComposerInput': 'Tin nhắn gửi Bọ',
+        '.bpComposerSendButton': 'Gửi tin nhắn',
+        '.bpComposerUploadButton': 'Đính kèm tệp',
+        '.bpComposerVoiceButton': 'Nhập bằng giọng nói',
+      };
+      for (const [selector, label] of Object.entries(labels)) {
+        root.querySelector(selector)?.setAttribute('aria-label', label);
+      }
+    };
+    syncInterface();
+    chatObserver?.disconnect();
+    chatObserver = new MutationObserver(syncInterface);
+    chatObserver.observe(root, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['disabled'],
+    });
   }
-  focus.addEventListener('click', () => {
-    const enabled = !document.body.classList.contains('focus-mode');
-    setFocusMode(enabled);
-    if (enabled) document.getElementById('conversation').scrollIntoView({ block: 'start' });
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && document.body.classList.contains('focus-mode')) {
-      setFocusMode(false);
-      focus.focus();
+
+  newChat.addEventListener('click', async () => {
+    if (!ready) return;
+    newChat.disabled = true;
+    try {
+      await window.botpress.restartConversation();
+      hasMessages = false;
+      welcome.hidden = false;
+    } catch {
+      showConnectionError();
+    } finally {
+      newChat.disabled = !ready;
     }
   });
 
-  function resetParallax() {
-    parallax.style.removeProperty('--tilt-x');
-    parallax.style.removeProperty('--tilt-y');
-  }
-  function updateMotion() {
-    motionPaused = reducedMotion.matches || motionPreference === 'paused';
-    document.body.classList.toggle('motion-paused', motionPaused);
-    motion.setAttribute('aria-pressed', String(motionPaused));
-    motion.setAttribute('aria-label', motionPaused ? 'Bật hiệu ứng chuyển động' : 'Tắt hiệu ứng chuyển động');
-    motionLabel.textContent = motionPaused ? 'Hiệu ứng: tắt' : 'Hiệu ứng: bật';
-    motion.disabled = reducedMotion.matches;
-    motion.title = reducedMotion.matches ? 'Đã giảm chuyển động theo cài đặt thiết bị' : motion.getAttribute('aria-label');
-    if (motionPaused) resetParallax();
-  }
-  try { motionPreference = window.localStorage.getItem('dozun-motion'); } catch {}
-  updateMotion();
-  reducedMotion.addEventListener('change', updateMotion);
-  motion.addEventListener('click', () => {
-    motionPreference = motionPaused ? 'playing' : 'paused';
-    try { window.localStorage.setItem('dozun-motion', motionPreference); } catch {}
-    updateMotion();
-  });
-  sculpture.addEventListener('pointermove', event => {
-    if (motionPaused || !finePointer.matches) return;
-    const bounds = sculpture.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - .5;
-    const y = (event.clientY - bounds.top) / bounds.height - .5;
-    parallax.style.setProperty('--tilt-x', `${(-y * 10).toFixed(2)}deg`);
-    parallax.style.setProperty('--tilt-y', `${(x * 12).toFixed(2)}deg`);
-  }, { passive: true });
-  sculpture.addEventListener('pointerleave', resetParallax);
-  document.addEventListener('visibilitychange', () => {
-    document.body.classList.toggle('motion-paused', document.hidden || motionPaused);
-  });
+  async function initializeChat() {
+    try {
+      const [configResponse, cssResponse] = await Promise.all([
+        fetch(configUrl, { signal: AbortSignal.timeout(15000) }),
+        fetch('./chat-theme.css'),
+      ]);
+      if (!configResponse.ok || !cssResponse.ok) throw new Error('Chat configuration unavailable');
+      const config = await configResponse.json();
+      chatCss = await cssResponse.text();
+      await new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.botpress.cloud/webchat/v3.6/inject.js';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
 
-  if (document.readyState === 'complete') {
-    finishLoading();
-  } else {
-    beginLoading();
-    window.addEventListener('load', finishLoading, { once: true });
+      window.botpress.on('webchat:initialized', () => window.botpress.open());
+      window.botpress.on('webchat:ready', () => {
+        window.clearTimeout(connectionTimeout);
+        loading.hidden = true;
+        help.hidden = true;
+        ready = true;
+        newChat.disabled = false;
+        connectChatInterface();
+        welcome.hidden = hasMessages;
+        setStatus('ready', 'Đã kết nối');
+      });
+      window.botpress.on('message', () => {
+        hasMessages = true;
+        welcome.hidden = true;
+      });
+      window.botpress.on('error', showConnectionError);
+      window.botpress.init({
+        ...config,
+        configuration: {
+          ...config.configuration,
+          botName: 'Bọ Chán',
+          botDescription: '',
+          botAvatar: new URL('./assets/chat/bo-chan-avatar.jpg', document.baseURI).href,
+          composerPlaceholder: 'Nhắn tin cho Bọ…',
+          embeddedChatId: 'bp-embedded-webchat',
+          themeMode: 'light',
+          fontFamily: 'inter',
+          color: '#334155',
+          variant: 'soft',
+          headerVariant: 'solid',
+          radius: 2,
+          footer: '',
+          additionalStylesheetUrl: '',
+          additionalStylesheet: chatCss,
+          soundEnabled: false,
+          proactiveMessageEnabled: false,
+        },
+      });
+    } catch {
+      showConnectionError();
+    }
   }
+
+  initializeChat();
 })();

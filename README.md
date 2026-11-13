@@ -27,10 +27,10 @@
 
 <br />
 
-<a href="https://iamdwn.github.io/iamdwn/" title="Chat with Bọ Chán">
+<a href="https://iamdwn.github.io/iamdwn/" title="Ghé nhà Bọ Chán">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/project-chat-mobile.svg" />
-    <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — personal chatbot, powered by Botpress. Open chat." />
+    <img src="./assets/project-chat.svg" width="100%" alt="Bọ Chán — Ghé nhà, kể Bọ nghe. A corgi chatbot powered by Botpress, with a preview of Bọ’s home." />
   </picture>
 </a>
 
